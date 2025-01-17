@@ -17,7 +17,7 @@ const BagSection = () => {
       ></div>
 
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black bg-opacity-4 h-[100%]"></div>
+      <div className="absolute inset-0 bg-black bg-opacity-40 h-[100%]"></div>
 
       {/* Main Content */}
       <div className='top-28 absolute flex flex-col items-center md:items-end text-white justify-center md:px-48 py-10 h-[100vh] w-[100vw] gap-8'>
