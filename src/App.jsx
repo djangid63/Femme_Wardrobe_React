@@ -1,12 +1,17 @@
 import React from "react";
-
-import HomePages from "./Pages/HomePages.jsx";
+import HomePage from "./Pages/HomePage.jsx";
+import { BrowserRouter, Routes, Router, Route } from "react-router-dom";
+import PowerSuitDetail from "./Pages/PowerSuitDetail.jsx";
 
 function App() {
   return (
-    <div className="overflow-x-hidden">
-      <HomePages />
-    </div>
+
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/product-details" element={<PowerSuitDetail />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
