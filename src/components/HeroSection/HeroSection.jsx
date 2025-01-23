@@ -29,8 +29,8 @@ function App() {
           {/* Left Navigation */}
           <AiOutlineMenu className="m-2 md:hidden" />
           <ul className="items-center justify-center hidden text-sm font-semibold gap-x-4 font-mont md:flex whitespace-nowrap">
-            <li className="cursor-pointer hover:underline">Shop</li>
             <li className="cursor-pointer hover:underline">Home</li>
+            <li className="cursor-pointer hover:underline">Shop</li>
             <li className="cursor-pointer hover:underline">About Us</li>
             <li className="cursor-pointer hover:underline">Contact Us</li>
           </ul>

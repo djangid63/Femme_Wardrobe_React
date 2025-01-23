@@ -1,7 +1,7 @@
 import React from "react";
 import HomePage from "./Pages/HomePage.jsx";
+import ProductDetails from "./Pages/ProductDetails.jsx"
 import { BrowserRouter, Routes, Router, Route } from "react-router-dom";
-import PowerSuitDetail from "./Pages/PowerSuitDetail.jsx";
 
 function App() {
   return (
@@ -9,7 +9,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/product-details" element={<PowerSuitDetail />} />
+        <Route path="/product-details" element={<ProductDetails />} />
       </Routes>
     </BrowserRouter>
   );
