@@ -69,15 +69,16 @@ const productDetails = () => {
             {/* Separator Section */}
             <div>
               <div>
-                <div className='w-[80%] h-[0.5px] bg-gray-400 my-4'></div>
-                <h1 className='text-gray-400 capitalize font-semibold font-mont text-2xl cursor-pointer '>$145.50</h1>
+                <div className='w-[80%] h-[0.5px] bg-gray-300 my-4'></div>
 
-                <div className='flex  mt-5'>
-                  <button className='px-5 py-3 text-gray-400 text-lg border-gray-300 border '>-</button>
-                  <button className='px-5 py-3 text-black text-lg  border-gray-300 border border-x-0 '>1</button>
-                  <button className='px-5 py-3 text-gray-400 text-lg border-gray-300 border'>+</button>
-                  <button className=''>Cart</button>
+                <h1 className='text-gray-400 capitalize font-semibold font-mont text-2xl cursor-pointer '>$145.50</h1>
+                <div className='flex mt-5'>
+                  <button className='px-5 py-2 text-gray-400 text-lg border-gray-300 border '>-</button>
+                  <button className='px-5 py-2 text-black text-lg  border-gray-300 border border-x-0 '>1</button>
+                  <button className='px-5 py-2 text-gray-400 text-lg border-gray-300 border'>+</button>
+                  <button className='uppercase px-4 border-black border mx-6 font-semibold font-mont text-sm'>Add To Cart</button>
                 </div>
+                <div className='w-[80%] h-[0.5px] bg-gray-300 my-6'></div>
               </div>
             </div>
           </div>
