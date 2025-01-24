@@ -47,7 +47,22 @@ const PowerSuitDetail = () => {
                 className="py-[2.5px] px-3 font-semibold cursor-pointer text-[14px] border border-black text-gray-400 rounded-[4px]"
               >XL
               </button>
-
+            </div>
+            <div className='flex gap-3 mt-5'>
+              {
+                (() => {
+                  let colors = {
+                    'red': 'bg-red-300',
+                    'blue': 'bg-blue-300',
+                    'green': 'bg-green-300',
+                    'yellow': 'bg-yellow-300',
+                    'black': 'bg-black',
+                  };
+                  return [...Array(5)].map((_, index) => (
+                    <div key={index} className={`w-6 h-6 rounded-full ${colors[index]} border border-black`}></div>
+                  ));
+                })()
+              }
             </div>
             <div></div>
           </div>
