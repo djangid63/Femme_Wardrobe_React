@@ -1,9 +1,22 @@
 import React from 'react'
 import NavBar from '../components/HeroSection/NavBar'
 import FooterSection from '../components/ExploreSection/FotterSection'
-import ProductBigImg1 from '../images/PopProductImgs/ProductBig1.jpeg'
+import ProductBigImg1 from '../images/PopProductImgs/ProductBig2.jpeg'
 
-const PowerSuitDetail = () => {
+const productDetails = () => {
+
+  const renderColorOptions = () => {
+    let colors = [
+      'bg-red-300',
+      'bg-blue-300',
+      'bg-green-300',
+      'bg-yellow-300',
+      'bg-black',
+    ];
+    return [...Array(5)].map((_, index) => (
+      <div key={index} className={`w-6 h-6 rounded-full ${colors[index]} border border-black`}></div>
+    ));
+  };
   return (
     <div className='w-full h-full flex flex-col justify-center items-center overflow-x-hidden'>
       {/*---------- NavBar  ------------ */}
@@ -12,13 +25,13 @@ const PowerSuitDetail = () => {
       </div>
       {/*---------- Content ------------ */}
       <div>
-        <section className='grid grid-cols-2 p-20 gap-3 w-screen h-screen place-items-center'>
+        <section className='grid grid-cols-2 py-10 w-screen h-screen place-items-center'>
           {/* Grid 1 */}
-          <div className='w-[660px] h-[80%] mb-16 flex items-center justify-center'>
-            <img src={ProductBigImg1} />
+          <div className='w-[600px] h-[100%] flex bg-cover'>
+            <img className='bg-contain py-10' src={ProductBigImg1} />
           </div>
           {/* Grid 2 */}
-          <div className='w-[100%] h-full'>
+          <div className='w-[100%] h-full py-10 '>
             <div className='flex flex-col gap-4'>
               <h6 className='font-mont font-semibold text-gray-400 cursor-pointer text-sm capitalize'>Home / Work & Office / Timeless Classic Collection</h6>
               <h3 className='capitalize font-bold font-mainHead text-4xl italic cursor-pointer'>Work & Office</h3>
@@ -48,32 +61,34 @@ const PowerSuitDetail = () => {
               >XL
               </button>
             </div>
+            {/* Color Palette */}
             <div className='flex gap-3 mt-5'>
-              {
-                (() => {
-                  let colors = {
-                    'red': 'bg-red-300',
-                    'blue': 'bg-blue-300',
-                    'green': 'bg-green-300',
-                    'yellow': 'bg-yellow-300',
-                    'black': 'bg-black',
-                  };
-                  return [...Array(5)].map((_, index) => (
-                    <div key={index} className={`w-6 h-6 rounded-full ${colors[index]} border border-black`}></div>
-                  ));
-                })()
-              }
+              {renderColorOptions()}
             </div>
-            <div></div>
+            <div className='text-gray-400 text-sm font-semibold my-3'>CLEAR</div>
+            {/* Separator Section */}
+            <div>
+              <div>
+                <div className='w-[80%] h-[0.5px] bg-gray-400 my-4'></div>
+                <h1 className='text-gray-400 capitalize font-semibold font-mont text-2xl cursor-pointer '>$145.50</h1>
+
+                <div className='flex  mt-5'>
+                  <button className='px-5 py-3 text-gray-400 text-lg border-gray-300 border '>-</button>
+                  <button className='px-5 py-3 text-black text-lg  border-gray-300 border border-x-0 '>1</button>
+                  <button className='px-5 py-3 text-gray-400 text-lg border-gray-300 border'>+</button>
+                  <button className=''>Cart</button>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
       </div>
       {/*---------- Footer ------------ */}
-      <div className='w-full h-full'>
+      <div className='w-full h-full mt-10'>
         <FooterSection />
       </div>
     </div>
   )
 }
 
-export default PowerSuitDetail
+export default productDetails
