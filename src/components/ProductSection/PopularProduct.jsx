@@ -24,7 +24,7 @@ const ProductCard1 = ({ productData }) => {
       <div className="grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-4">
         {products.map((product, index) => (
           <div key={index}>
-            <Link to="/product-details" key={index}>
+            <Link to={`/product-details/${product.id}`}>
               <div className="flex justify-center">
                 <img
                   className="max-w-96 h-auto md:w-[320px] md:h-[386px] mt-8 mb-4"
@@ -34,7 +34,7 @@ const ProductCard1 = ({ productData }) => {
               </div>
             </Link>
             <div className="w-[100%] flex flex-col gap-2 text-center">
-              <Link to="/product-details" key={index}>
+              <Link to={`/product-details/${product.id}`}>
                 <p className="font-mont text-gray-300 font-semibold text-[12px]">
                   {product.subtitle}
                 </p>

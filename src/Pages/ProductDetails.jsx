@@ -3,9 +3,12 @@ import NavBar from '../components/HeroSection/NavBar'
 import FooterSection from '../components/ExploreSection/FotterSection'
 import ProductBigImg1 from '../images/PopProductImgs/ProductBig2.jpeg'
 import { useState } from 'react';
+import { useParams } from 'react-router-dom';
+import productData from '../Data/PopularProductData';
 
 const productDetails = () => {
-
+  const { id } = useParams();
+  const product = productData.find((product) => product.id === parseInt(id));
   const [count, setCount] = useState(1);
 
   const handleIncrement = () => {
@@ -16,18 +19,7 @@ const productDetails = () => {
     setCount((prevCount) => prevCount > 1 ? prevCount - 1 : prevCount);
   }
 
-  const renderColorOptions = () => {
-    let colors = [
-      'bg-red-300',
-      'bg-blue-300',
-      'bg-green-300',
-      'bg-yellow-300',
-      'bg-black',
-    ];
-    return [...Array(5)].map((_, index) => (
-      <div key={index} className={`w-6 h-6 rounded-full ${colors[index]} border border-black`}></div>
-    ));
-  };
+
   return (
     <div className='w-full h-full flex flex-col justify-center items-center overflow-x-hidden'>
       {/*---------- NavBar  ------------ */}
@@ -39,48 +31,44 @@ const productDetails = () => {
         <section className='grid grid-cols-2 py-10 w-screen h-screen place-items-center'>
           {/* Grid 1 */}
           <div className='w-[600px] h-[100%] flex bg-cover'>
-            <img className='bg-contain py-10' src={ProductBigImg1} />
+            <img className='bg-contain py-10' src={product.img} />
           </div>
           {/* Grid 2 */}
           <div className='w-[100%] h-full py-10 '>
             <div className='flex flex-col gap-4'>
-              <h6 className='font-mont font-semibold text-gray-400 cursor-pointer text-sm capitalize'>Home / Work & Office / Timeless Classic Collection</h6>
-              <h3 className='capitalize font-bold font-mainHead text-4xl italic cursor-pointer'>Work & Office</h3>
-              <h2 className='capitalize font-semibold cursor-pointer text-2xl font-mainHead'>Timeless Classic Collection</h2>
-              <h1 className='text-gray-400 capitalize font-bold font-mainHead text-4xl italic cursor-pointer '>$124.90 - $154.90 & Free Shipping</h1>
-              <p className='text-gray-400 font-mont capitalize'>Crafted from soft, breathable fabrics, the relaxed fit provides a carefree silhouette,<br /> while thoughtful details add a touch of urban chic. Whether you're lounging at home<br />  or navigating a bustling day, our Timeless Classic Collection effortlessly combine ease<br />  with fashion, allowing you to move with relaxed confidence while<br />  making a statement of casual sophistication.</p>
+              <h6 className='font-mont font-semibold text-gray-400 cursor-pointer text-sm capitalize'>{product.description}</h6>
+              <h3 className='capitalize font-bold font-mainHead text-4xl italic cursor-pointer'>{product.category}</h3>
+              <h2 className='capitalize font-semibold cursor-pointer text-2xl font-mainHead'>{product.collection}</h2>
+              <h1 className='text-gray-400 capitalize font-bold font-mainHead text-4xl italic cursor-pointer '>{product.pricingDetails}</h1>
+              <p className='text-gray-400 font-mont capitalize'>{product.productDetails}</p>
             </div>
             <div className='flex gap-3 mt-5'>
-              <button
-                className="py-[2.5px] px-3 font-semibold cursor-pointer text-[14px] border border-black text-gray-400 rounded-[4px]"
-              >XS
-              </button>
-              <button
-                className="py-[2.5px] px-3 font-semibold cursor-pointer text-[14px] border border-black text-gray-400 rounded-[4px]"
-              >S
-              </button>
-              <button
-                className="py-[2.5px] px-3 font-semibold cursor-pointer text-[14px] border border-black text-gray-400 rounded-[4px]"
-              >M
-              </button>
-              <button
-                className="py-[2.5px] px-3 font-semibold cursor-pointer text-[14px] border border-black text-gray-400 rounded-[4px]"
-              >L
-              </button>
-              <button
-                className="py-[2.5px] px-3 font-semibold cursor-pointer text-[14px] border border-black text-gray-400 rounded-[4px]"
-              >XL
-              </button>
+              {
+                product.sizes.map((size, index) => {
+                  return <button key={index}
+                    className="py-[2.5px] px-3 font-semibold cursor-pointer text-[14px] border border-black text-gray-400 rounded-[4px]"
+                  >{size}
+                  </button>
+                })
+              }
             </div>
             {/* Color Palette */}
             <div className='flex gap-3 mt-5'>
-              {renderColorOptions()}
+              {product.colors.map((color, colorIndex) => (
+                <div
+                  key={colorIndex}
+                  className={`w-5 h-5 rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 ${color === "white" ? "border border-gray-500" : ""
+                    }`}
+                  style={{ backgroundColor: color }}
+                  tabIndex="0"
+                ></div>
+              ))}
             </div>
             <div className='text-gray-400 text-sm font-semibold my-3'>CLEAR</div>
             {/* Separator Section */}
             <div>
               <div className='w-[80%] h-[0.5px] bg-gray-300 my-4'></div>
-              <h1 className='text-gray-400 capitalize font-semibold font-mont text-2xl cursor-pointer '>$145.50</h1>
+              <h1 className='text-gray-400 capitalize font-semibold font-mont text-2xl cursor-pointer '>${product.price}</h1>
               <div className='flex mt-5'>
                 <button onClick={handleDecrement} className='px-5 py-2 text-gray-400 text-lg border-gray-300 border '>-</button>
                 <button className='px-5 py-2 text-black text-lg  border-gray-300 border border-x-0 '>{count}</button>
@@ -125,10 +113,10 @@ const productDetails = () => {
         </section>
       </div >
       {/*---------- Footer ------------ */}
-      <div div className='w-full h-full mt-10' >
+      <div className='w-full h-full mt-10' >
         <FooterSection />
-      </div >
-    </div >
+      </div>
+    </div>
   )
 }
 
