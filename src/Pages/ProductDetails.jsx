@@ -2,8 +2,19 @@ import React from 'react'
 import NavBar from '../components/HeroSection/NavBar'
 import FooterSection from '../components/ExploreSection/FotterSection'
 import ProductBigImg1 from '../images/PopProductImgs/ProductBig2.jpeg'
+import { useState } from 'react';
 
 const productDetails = () => {
+
+  const [count, setCount] = useState(1);
+
+  const handleIncrement = () => {
+    setCount((prevCount) => prevCount < 10 ? prevCount + 1 : prevCount);
+  }
+
+  const handleDecrement = () => {
+    setCount((prevCount) => prevCount > 1 ? prevCount - 1 : prevCount);
+  }
 
   const renderColorOptions = () => {
     let colors = [
@@ -68,27 +79,56 @@ const productDetails = () => {
             <div className='text-gray-400 text-sm font-semibold my-3'>CLEAR</div>
             {/* Separator Section */}
             <div>
-              <div>
-                <div className='w-[80%] h-[0.5px] bg-gray-300 my-4'></div>
-
-                <h1 className='text-gray-400 capitalize font-semibold font-mont text-2xl cursor-pointer '>$145.50</h1>
-                <div className='flex mt-5'>
-                  <button className='px-5 py-2 text-gray-400 text-lg border-gray-300 border '>-</button>
-                  <button className='px-5 py-2 text-black text-lg  border-gray-300 border border-x-0 '>1</button>
-                  <button className='px-5 py-2 text-gray-400 text-lg border-gray-300 border'>+</button>
-                  <button className='uppercase px-4 border-black border mx-6 font-semibold font-mont text-sm'>Add To Cart</button>
+              <div className='w-[80%] h-[0.5px] bg-gray-300 my-4'></div>
+              <h1 className='text-gray-400 capitalize font-semibold font-mont text-2xl cursor-pointer '>$145.50</h1>
+              <div className='flex mt-5'>
+                <button onClick={handleDecrement} className='px-5 py-2 text-gray-400 text-lg border-gray-300 border '>-</button>
+                <button className='px-5 py-2 text-black text-lg  border-gray-300 border border-x-0 '>{count}</button>
+                <button onClick={handleIncrement} className='px-5 py-2 text-gray-400 text-lg border-gray-300 border'>+</button>
+                <button className='uppercase px-4 border-black border mx-6 font-semibold font-mont text-sm'>Add To Cart</button>
+              </div>
+              <div className='w-[80%] h-[0.5px] bg-gray-300 my-6'></div>
+              <div className="w-[80%] relative border border-gray-300 rounded-md mt-2 shadow-sm p-4">
+                {/* Header Text */}
+                <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-white px-2">
+                  <h2 className="text-lg font-mont font-semibold text-gray-400">
+                    Guaranteed Safe Checkout
+                  </h2>
                 </div>
-                <div className='w-[80%] h-[0.5px] bg-gray-300 my-6'></div>
+
+                {/* Payment Icons */}
+                <div className="flex justify-center space-x-4 mt-6">
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/0/04/Visa.svg"
+                    alt="Visa"
+                    className="w-12 h-8 object-contain"
+                  />
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Mastercard_2019_logo.svg"
+                    alt="MasterCard"
+                    className="w-12 h-8 object-contain"
+                  />
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/American_Express_logo_%282018%29.svg/1200px-American_Express_logo_%282018%29.svg.png"
+                    alt="American Express"
+                    className="w-12 h-8 object-contain"
+                  />
+                  <img
+                    src="https://w7.pngwing.com/pngs/123/955/png-transparent-india-rupay-debit-card-bank-credit-card-india-text-trademark-logo-thumbnail.png"
+                    alt="Rupay"
+                    className="w-12 h-8 object-contain"
+                  />
+                </div>
               </div>
             </div>
           </div>
         </section>
-      </div>
+      </div >
       {/*---------- Footer ------------ */}
-      <div className='w-full h-full mt-10'>
+      <div div className='w-full h-full mt-10' >
         <FooterSection />
-      </div>
-    </div>
+      </div >
+    </div >
   )
 }
 
