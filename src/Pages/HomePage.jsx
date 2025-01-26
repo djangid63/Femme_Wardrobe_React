@@ -1,6 +1,5 @@
 import React from 'react'
-import PopularProductData from "../Data/PopularProductData.js";
-import newProductData from "../Data/NewProductData.js";
+import PopularProductData from "../Data/ProductData.js";
 import HeroSection from "../components/HeroSection/HeroSection.jsx";
 import ProductCard1 from "../components/ProductSection/PopularProduct.jsx";
 import BagSection from "../components/ProductSection/BagSection.jsx";
@@ -12,15 +11,19 @@ import FeaturesSection from "../components/ReviewSection/featuresSection.jsx";
 import ExploreSection from "../components/ExploreSection/ExploreSection.jsx";
 import FooterSection from "../components/ExploreSection/FotterSection.jsx";
 
+const popularProductData = PopularProductData.filter((data) => data.id <= 4);
+console.log(popularProductData);
+const NewProductData = PopularProductData.filter((data) => data.id > 4);
+console.log(NewProductData);
 const HomePages = () => {
   return (
     <div className='overflow-x-hidden'>
       <HeroSection />
-      <ProductCard1 productData={PopularProductData} />
+      <ProductCard1 productData={popularProductData} />
       <BagSection />
       <BlazerSection />
       <ReinventedSection />
-      <NewProductCard newProductData={newProductData} />
+      <NewProductCard newProductData={NewProductData} />
       <ReviewSection />
       <FeaturesSection />
       <ExploreSection />

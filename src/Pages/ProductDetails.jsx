@@ -1,10 +1,9 @@
 import React from 'react'
 import NavBar from '../components/HeroSection/NavBar'
 import FooterSection from '../components/ExploreSection/FotterSection'
-import ProductBigImg1 from '../images/PopProductImgs/ProductBig2.jpeg'
 import { useState } from 'react';
 import { useParams } from 'react-router-dom';
-import productData from '../Data/PopularProductData';
+import productData from '../Data/ProductData';
 
 const productDetails = () => {
   const { id } = useParams();
