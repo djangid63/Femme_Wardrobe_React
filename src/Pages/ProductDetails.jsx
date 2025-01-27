@@ -30,7 +30,7 @@ const productDetails = () => {
         <section className='grid grid-cols-2 py-10 w-screen h-screen place-items-center'>
           {/* Grid 1 */}
           <div className='w-[600px] h-[100%] flex bg-cover'>
-            <img className='bg-contain py-10' src={product.img} />
+            <img className='bg-contain py-10' src={product.imgHR} />
           </div>
           {/* Grid 2 */}
           <div className='w-[100%] h-full py-10 '>
