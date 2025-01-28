@@ -8,7 +8,7 @@ import productData from '../Data/ProductData';
 const ProductDetails = () => {
   const { id } = useParams();
   const product = productData.find((product) => product.id === parseInt(id));
-  
+
   if (!product) {
     return <div>Product not found</div>;
   }
