@@ -37,18 +37,18 @@ const ProductDetails = () => {
 
       {/*---------- Content ------------ */}
       <div className='w-full'>
-        <section className='grid md:grid-cols-[1fr_1fr] grid-cols-1 py-10 w-full min-h-screen place-items-center'>
+        <section className='grid md:grid-cols-[1fr_1fr] grid-cols-1 py-10 w-full min-h-screen place-items-start justify-items-center'>
           {/* Grid 1 - Image */}
           <div className='w-full max-w-[600px] h-auto flex justify-center items-center p-4'>
             <img
-              className='w-full h-auto max-h-[650px] object-contain'
+              className='w-full h-auto max-h-[750px] object-contain'
               src={product.imgHR}
               alt={product.collection}
             />
           </div>
 
           {/* Grid 2 - Details */}
-          <div className='w-full max-w-[600px] p-4'>
+          <div className='w-full max-w-[550px] h-auto p-4'>
             <div className='flex flex-col gap-4'>
               <h6 className='font-mont font-semibold text-gray-400 cursor-pointer text-sm capitalize'>
                 {product.description}
@@ -59,10 +59,10 @@ const ProductDetails = () => {
               <h2 className='capitalize font-semibold cursor-pointer text-2xl font-mainHead'>
                 {product.collection}
               </h2>
-              <h1 className='text-gray-400 capitalize font-bold font-mainHead text-3xl md:text-4xl italic cursor-pointer'>
+              <h1 className='text-gray-400 capitalize font-bold font-mainHead text-2xl md:text-3xl lg:text-4xl italic cursor-pointer'>
                 {product.pricingDetails}
               </h1>
-              <p className='text-gray-400 font-mont capitalize text-sm md:text-base'>
+              <p className='text-gray-400 font-mont capitalize text-sm lg:text-base'>
                 {product.productDetails}
               </p>
             </div>
@@ -72,7 +72,7 @@ const ProductDetails = () => {
               {product.sizes.map((size, index) => (
                 <button
                   key={index}
-                  className='py-1 px-3 font-semibold cursor-pointer text-sm border border-black text-gray-400 rounded'
+                  className='py-1 px-3 font-semibold cursor-pointer md:text-[12px] sm:text-sm border border-black text-gray-400 rounded'
                 >
                   {size}
                 </button>
@@ -126,7 +126,7 @@ const ProductDetails = () => {
               {/* Guaranteed Safe Checkout */}
               <div className='w-full relative border border-gray-300 rounded-md mt-2 shadow-sm p-4'>
                 <div className='absolute -top-3 left-1/2 transform -translate-x-1/2 bg-white px-2'>
-                  <h2 className='text-lg font-mont font-semibold text-gray-400'>
+                  <h2 className='text-sm lg:text-base font-mont font-semibold text-gray-400'>
                     Guaranteed Safe Checkout
                   </h2>
                 </div>

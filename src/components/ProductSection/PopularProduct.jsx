@@ -21,18 +21,18 @@ const ProductCard1 = ({ productData }) => {
       <div className="text-4xl md:text-6xl font-bold text-center font-mainHead italic capitalize tracking-[2px]">
         Most Popular
       </div>
-      <div className="grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-4">
+      <div className="grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-6">
         {products.map((product, index) => (
           <div key={index}>
-            <Link to={`/product-details/${product.id}`}>
-              <div className="flex justify-center">
+            <div className="flex justify-center">
+              <Link to={`/product-details/${product.id}`}>
                 <img
-                  className="max-w-96 h-auto md:w-[320px] md:h-[386px] mt-8 mb-4"
+                  className="max-w-86 h-auto md:w-[320px] md:h-[386px]  mt-8 mb-4"
                   src={product.img}
                   alt={product.title}
                 />
-              </div>
-            </Link>
+              </Link>
+            </div>
             <div className="w-[100%] flex flex-col gap-2 text-center">
               <Link to={`/product-details/${product.id}`}>
                 <p className="font-mont text-gray-300 font-semibold text-[12px]">
