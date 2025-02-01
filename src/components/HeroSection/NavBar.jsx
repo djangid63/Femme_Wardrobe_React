@@ -1,10 +1,9 @@
-import React, { useState } from 'react';
-import { AiOutlineMenu, AiOutlineSearch, AiOutlineShopping } from 'react-icons/ai';
+import {  AiOutlineSearch, AiOutlineShopping } from 'react-icons/ai';
 
 const NavBar = ({ count }) => {
 
   return (
-    <div className="flex flex-col md:flex-row justify-between items-center w-full py-6 px-[135px]">
+    <div className="flex flex-col md:flex-row justify-between items-center w-full py-6 px-[115px]">
 
       <ul className="hidden lg:flex items-center justify-center text-[15px] font-semibold gap-x-7 font-mont whitespace-nowrap"
       >

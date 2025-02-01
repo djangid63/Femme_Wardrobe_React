@@ -19,9 +19,9 @@ const MiniNavBar = ({ product }) => {
   }, []);
 
   return (
-    <div className={`fixed inset-0 px-10 md:px-[138px] w-full h-[10vh] bg-white flex justify-between items-center z-50 shadow-md shadow-black/10 transition-opacity duration-300 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
+    <div className={`fixed inset-0 px-10 md:px-[115px] w-full h-[10vh] bg-white flex justify-between items-center z-50 shadow-md shadow-black/10 transition-opacity duration-300 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
       {/* Cont One */}
-      <div className='hidden md:flex items-center gap-2'>
+      <div className='hidden md:flex items-center gap-6'>
         <img className='w-12 h-14' src={product.img} alt={product.title} />
         <h1 className='font-mont text-sm md:text-xl font-semibold text-gray-500'>{product.collection}</h1>
       </div>

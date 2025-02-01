@@ -42,7 +42,7 @@ const ProductDetails = () => {
         <div className='w-full'>
           <section className='grid md:grid-cols-[1fr_1fr] grid-cols-1 py-10 w-full min-h-screen place-items-start justify-items-center'>
             {/* Grid 1 - Image */}
-            <div className='w-full max-w-[600px] h-auto flex justify-center items-center p-4'>
+            <div className='w-full max-w-[750px] h-auto flex justify-end items-center p-4'>
               <img
                 className='w-full h-auto max-h-[750px] object-contain'
                 src={product.imgHR}
@@ -51,7 +51,7 @@ const ProductDetails = () => {
             </div>
 
             {/* Grid 2 - Details */}
-            <div className='w-full max-w-[550px] h-auto p-4'>
+            <div className='w-full max-w-[700px] h-auto p-4'>
               <div className='flex flex-col gap-4'>
                 <h6 className='font-mont font-semibold text-gray-400 cursor-pointer text-sm capitalize'>
                   {product.description}
