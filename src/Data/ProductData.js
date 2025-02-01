@@ -32,7 +32,7 @@ const productData = [
     description: "Home / Work & Office / Timeless Classic Collection",
     category: "Work & Office",
     collection: "Timeless Classic Collection",
-    pricingDetails: "$124.90 - $154.90 & Free Shipping",
+    pricingDetails: "$124.90 - $154.90",
     productDetails: "Crafted from soft, breathable fabrics, the relaxed fit provides a carefree silhouette, while thoughtful details add a touch of urban chic. Perfect for creating a professional yet relaxed style.",
   },
   {
@@ -47,7 +47,7 @@ const productData = [
     description: "Home / Casual Wear / Bohemian Rhapsody Attire",
     category: "Casual Wear",
     collection: "Bohemian Rhapsody",
-    pricingDetails: "$154.90 - $174.90 & Free Shipping",
+    pricingDetails: "$154.90 - $174.90",
     productDetails: "This collection blends carefree bohemian vibes with a modern twist, making it perfect for casual outings and relaxed gatherings."
   },
   {
@@ -62,7 +62,7 @@ const productData = [
     description: "Home / Evening Wear / Midnight Gala Maxi Dress",
     category: "Evening Wear",
     collection: "Midnight Gala",
-    pricingDetails: "$174.90 - $194.90 & Free Shipping",
+    pricingDetails: "$174.90 - $194.90",
     productDetails: "Elevate your evening with this elegant maxi dress, designed for sophisticated occasions and midnight celebrations."
   },
   {
@@ -77,7 +77,7 @@ const productData = [
     description: "Home / Office Wear / Power Suit Ensemble",
     category: "Office Wear",
     collection: "Power Suit Collection",
-    pricingDetails: "$119.90 - $139.90 & Free Shipping",
+    pricingDetails: "$119.90 - $139.90",
     productDetails: "Empower your wardrobe with this power suit ensemble, offering a tailored fit and bold design for a commanding presence."
   },
   {
@@ -92,7 +92,7 @@ const productData = [
     description: "Home / Work & Office / Timeless Classic Collection",
     category: "Work & Office",
     collection: "Timeless Classic Collection",
-    pricingDetails: "$124.90 - $154.90 & Free Shipping",
+    pricingDetails: "$124.90 - $154.90",
     productDetails: "Crafted from soft, breathable fabrics, the relaxed fit provides a carefree silhouette, while thoughtful details add a touch of urban chic. Perfect for creating a professional yet relaxed style."
   },
   {
@@ -107,7 +107,7 @@ const productData = [
     description: "Home / Casual Wear / Bohemian Rhapsody Attire",
     category: "Casual Wear",
     collection: "Bohemian Rhapsody",
-    pricingDetails: "$154.90 - $174.90 & Free Shipping",
+    pricingDetails: "$154.90 - $174.90",
     productDetails: "This collection blends carefree bohemian vibes with a modern twist, making it perfect for casual outings and relaxed gatherings."
   },
   {
@@ -122,7 +122,7 @@ const productData = [
     description: "Home / Evening Wear / Midnight Gala Maxi Dress",
     category: "Evening Wear",
     collection: "Midnight Gala",
-    pricingDetails: "$174.90 - $194.90 & Free Shipping",
+    pricingDetails: "$174.90 - $194.90",
     productDetails: "Elevate your evening with this elegant maxi dress, designed for sophisticated occasions and midnight celebrations."
   },
   {
@@ -137,7 +137,7 @@ const productData = [
     description: "Home / Office Wear / Power Suit Ensemble",
     category: "Office Wear",
     collection: "Power Suit Collection",
-    pricingDetails: "$119.90 - $139.90 & Free Shipping",
+    pricingDetails: "$119.90 - $139.90",
     productDetails: "Empower your wardrobe with this power suit ensemble, offering a tailored fit and bold design for a commanding presence."
   }
 ]

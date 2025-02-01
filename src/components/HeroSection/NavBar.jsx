@@ -4,9 +4,9 @@ import { AiOutlineMenu, AiOutlineSearch, AiOutlineShopping } from 'react-icons/a
 const NavBar = ({ count }) => {
 
   return (
-    <div className="flex flex-col md:flex-row justify-between items-center w-full py-6 px-10">
+    <div className="flex flex-col md:flex-row justify-between items-center w-full py-6 px-[135px]">
 
-      <ul className="hidden lg:flex items-center justify-center text-[15px] font-semibold gap-x-7 font-mont whitespace-nowrap md:order-1"
+      <ul className="hidden lg:flex items-center justify-center text-[15px] font-semibold gap-x-7 font-mont whitespace-nowrap"
       >
         <li className="cursor-pointer hover:underline">Home</li>
         <li className="cursor-pointer hover:underline">Shop</li>
@@ -15,7 +15,7 @@ const NavBar = ({ count }) => {
       </ul>
 
       {/* Middle Brand */}
-      <div className="text-center">
+      <div className="text-center md:mr-36">
         <div className="text-xl font-thin">
           <img
             src="https://websitedemos.net/clothing-store-02/wp-content/uploads/sites/1447/2024/03/logo-01.svg"
