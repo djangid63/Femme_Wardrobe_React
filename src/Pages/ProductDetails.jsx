@@ -5,6 +5,7 @@ import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import productData from '../Data/ProductData';
 import MiniNavBar from '../components/HeroSection/MiniNavBar';
+import ScrollToTop from '../Validation/ScrollToTop';
 
 const ProductDetails = () => {
   const { id } = useParams();
@@ -38,6 +39,7 @@ const ProductDetails = () => {
   return (
     <>
       <div className='w-full h-full flex flex-col justify-center items-center overflow-x-hidden'>
+        <ScrollToTop />
         <MiniNavBar product={product} />
         {/*---------- NavBar  ------------ */}
         <div className='w-full'>
