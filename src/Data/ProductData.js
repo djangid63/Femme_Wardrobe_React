@@ -33,7 +33,7 @@ const productData = [
     category: "Work & Office",
     collection: "Timeless Classic Collection",
     pricingDetails: "$124.90 - $154.90 & Free Shipping",
-    productDetails: "Crafted from soft, breathable fabrics, the relaxed fit provides a carefree silhouette, while thoughtful details add a touch of urban chic. Perfect for creating a professional yet relaxed style."
+    productDetails: "Crafted from soft, breathable fabrics, the relaxed fit provides a carefree silhouette, while thoughtful details add a touch of urban chic. Perfect for creating a professional yet relaxed style.",
   },
   {
     id: 2,

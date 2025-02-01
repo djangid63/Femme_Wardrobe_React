@@ -32,7 +32,7 @@ const ProductDetails = () => {
     <div className='w-full h-full flex flex-col justify-center items-center overflow-x-hidden'>
       {/*---------- NavBar  ------------ */}
       <div className='w-full'>
-        <NavBar />
+        <NavBar count={count} />
       </div>
 
       {/*---------- Content ------------ */}

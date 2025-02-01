@@ -1,9 +1,9 @@
 import React from 'react'
 import { AiOutlineMenu, AiOutlineSearch, AiOutlineShopping } from 'react-icons/ai'
 
-const NavBar = () => {
+const NavBar = ({ count }) => {
   return (
-    <div className="flex justify-center items-center md:justify-between w-full py-6 px-48 ">
+    <div className="flex justify-center items-center md:justify-between w-full py-6 px-48">
       {/* Left Navigation */}
       <AiOutlineMenu className="m-2 md:hidden" />
       <ul className="items-center justify-center hidden text-[15px] font-semibold gap-x-7 font-mont md:flex whitespace-nowrap">
@@ -29,8 +29,11 @@ const NavBar = () => {
         <div className="cursor-pointer">
           <AiOutlineSearch className="w-7 h-7 " />
         </div>
-        <div className="cursor-pointer">
-          <AiOutlineShopping className="w-7 h-7 " />
+        <div className="relative">
+          <AiOutlineShopping className="w-7 h-7" />
+          <span className="absolute -top-2 -right-2 w-4 h-4 bg-black rounded-full text-white text-xs flex items-center justify-center text-center">
+            {count}
+          </span>
         </div>
       </div>
     </div>
