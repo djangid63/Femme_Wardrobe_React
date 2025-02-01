@@ -3,7 +3,7 @@ import { AiOutlineSearch, AiOutlineShopping } from 'react-icons/ai';
 const NavBar = ({ cart }) => {
 
   return (
-    <div className="flex flex-col md:flex-row justify-between items-center w-full py-6 px-[115px]">
+    <div className="flex flex-col md:flex-row justify-between items-center w-full py-6 px-[42px]">
 
       <ul className="hidden lg:flex items-center justify-center text-[15px] font-semibold gap-x-7 font-mont whitespace-nowrap"
       >

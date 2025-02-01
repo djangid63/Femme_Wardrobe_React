@@ -6,6 +6,7 @@ import { useParams } from 'react-router-dom';
 import productData from '../Data/ProductData';
 import MiniNavBar from '../components/HeroSection/MiniNavBar';
 import ScrollToTop from '../Validation/ScrollToTop';
+import { use } from 'react';
 
 const ProductDetails = () => {
   const { id } = useParams();
@@ -19,12 +20,20 @@ const ProductDetails = () => {
   const [price, setPrice] = useState(product.price * count);
   const [cart, setCart] = useState(0);
 
+  const [isSimmering, setSimmering] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setSimmering(false);
+    }, 1500);
+  }, []);
+
   const addToCart = () => {
     setCart(count)
   }
 
   useEffect(() => {
-    setPrice(product.price * count);
+    setPrice(Math.round(product.price * count).toFixed(2));
   }, [product.price, count]);
 
   const handleIncrement = () => {
@@ -37,8 +46,9 @@ const ProductDetails = () => {
 
 
   return (
-    <>
-      <div className='w-full h-full flex flex-col justify-center items-center overflow-x-hidden'>
+    <div className='w-full h-full flex flex-col justify-center items-center overflow-x-hidden'>
+      <div className='px-20'>
+
         <ScrollToTop />
         <MiniNavBar product={product} />
         {/*---------- NavBar  ------------ */}
@@ -50,13 +60,22 @@ const ProductDetails = () => {
         <div className='w-full'>
           <section className='grid md:grid-cols-[1fr_1fr] grid-cols-1 py-10 w-full min-h-screen place-items-start justify-items-center'>
             {/* Grid 1 - Image */}
-            <div className='w-full max-w-[750px] h-auto flex justify-end items-center p-4'>
-              <img
-                className='w-full h-auto max-h-[750px] object-contain'
-                src={product.imgHR}
-                alt={product.collection}
-              />
-            </div>
+            {isSimmering ? (
+              /* Simmer Effect Skeleton */
+              <div className='w-full mt-4 max-w-[670px] h-[750px] flex justify-center items-center bg-gray-300 animate-pulse'>
+              </div>
+            ) : (
+              <div className='w-full max-w-[750px] h-auto flex justify-end items-center p-4'>
+                <img
+                  className='w-full h-auto max-h-[750px] object-contain scale-invert'
+                  src={product.imgHR}
+                  alt={`Image of ${product.collection}`}
+                  loading="lazy"
+                  onError={(e) => { e.target.onerror = null; e.target.src = 'path/to/placeholder.jpg'; }}
+                />
+              </div>
+            )}
+
 
             {/* Grid 2 - Details */}
             <div className='w-full max-w-[700px] h-auto p-4'>
@@ -70,10 +89,10 @@ const ProductDetails = () => {
                 <h2 className='capitalize font-semibold cursor-pointer text-2xl font-mainHead'>
                   {product.collection}
                 </h2>
-                <h1 className='text-gray-400 capitalize font-bold font-mainHead text-2xl md:text-3xl lg:text-4xl italic cursor-pointer'>
+                <h1 className='text-gray-500 capitalize font-bold font-mainHead text-2xl md:text-3xl lg:text-4xl italic cursor-pointer'>
                   {product.pricingDetails} & Free Shipping
                 </h1>
-                <p className='text-gray-400 font-mont capitalize text-sm lg:text-base'>
+                <p className='text-gray-500 font-mont font-semibold capitalize text-sm lg:text-base'>
                   {product.productDetails}
                 </p>
               </div>
@@ -168,13 +187,13 @@ const ProductDetails = () => {
             </div>
           </section>
         </div>
-
-        {/*---------- Footer ------------ */}
-        <div className='w-full mt-10'>
-          <FooterSection />
-        </div>
       </div>
-    </>
+
+      {/*---------- Footer ------------ */}
+      <div className='w-full mt-10'>
+        <FooterSection />
+      </div>
+    </div>
   );
 };
 
