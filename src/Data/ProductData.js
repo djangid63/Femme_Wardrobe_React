@@ -2,29 +2,25 @@ import ProductImg1 from "../images/PopProductImgs/Product1.jpeg";
 import ProductImg2 from "../images/PopProductImgs/Product2.jpeg";
 import ProductImg3 from "../images/PopProductImgs/Product3.jpeg";
 import ProductImg4 from "../images/PopProductImgs/Product4.jpeg";
-
 import NewProductImg1 from "../images/NewProductImgs/NewProduct1.jpeg";
 import NewProductImg2 from "../images/NewProductImgs/NewProduct2.jpeg";
 import NewProductImg3 from "../images/NewProductImgs/NewProduct3.jpeg";
 import NewProductImg4 from "../images/NewProductImgs/NewProduct4.jpeg";
-
 import HRproductImg1 from "../images/PopProductImgs/ProductBig1.jpeg";
 import HRproductImg2 from "../images/PopProductImgs/ProductBig2.jpeg";
 import HRproductImg3 from "../images/PopProductImgs/ProductBig3.jpeg";
 import HRproductImg4 from "../images/PopProductImgs/ProductBig4.jpeg";
-
 import HRNewProductImg1 from "../images/NewProductImgs/NewProductBig1.jpeg";
 import HRNewProductImg2 from "../images/NewProductImgs/NewProductBig2.jpeg";
 import HRNewProductImg3 from "../images/NewProductImgs/NewProductBig3.jpeg";
 import HRNewProductImg4 from "../images/NewProductImgs/NewProductBig4.jpeg";
-
 
 const productData = [
   {
     id: 1,
     title: "Work &amp",
     subtitle: "Timeless Classic Collection",
-    price: 125,
+    price: 125.47, // Updated with two decimal places and random digits
     imgHR: HRproductImg1,
     img: ProductImg1,
     sizes: ["XL", "L", "M", "S", "XS"],
@@ -39,7 +35,7 @@ const productData = [
     id: 2,
     title: "Casual",
     subtitle: "Bohemian Rhapsody Attire",
-    price: 155,
+    price: 155.82, // Updated with two decimal places and random digits
     imgHR: HRproductImg2,
     img: ProductImg2,
     sizes: ["L", "M", "S", "XS"],
@@ -54,7 +50,7 @@ const productData = [
     id: 3,
     title: "Evening Dresses",
     subtitle: "Midnight Gala Maxi Dress",
-    price: 175,
+    price: 175.63, // Updated with two decimal places and random digits
     imgHR: HRproductImg3,
     img: ProductImg3,
     sizes: ["XL", "L", "M", "S", "XS"],
@@ -69,7 +65,7 @@ const productData = [
     id: 4,
     title: "Casual",
     subtitle: "Power Suit Ensemble",
-    price: 120,
+    price: 120.19, // Updated with two decimal places and random digits
     imgHR: HRproductImg4,
     img: ProductImg4,
     sizes: ["XL", "L", "M", "S", "XS"],
@@ -84,7 +80,7 @@ const productData = [
     id: 5,
     title: "Work &amp",
     subtitle: "Timeless Classic Collection",
-    price: 125,
+    price: 125.28, // Updated with two decimal places and random digits
     imgHR: HRNewProductImg1,
     img: NewProductImg1,
     sizes: ["XL", "L", "M", "S", "XS"],
@@ -99,7 +95,7 @@ const productData = [
     id: 6,
     title: "Casual",
     subtitle: "Bohemian Rhapsody Attire",
-    price: 155,
+    price: 155.36, // Updated with two decimal places and random digits
     imgHR: HRNewProductImg2,
     img: NewProductImg2,
     sizes: ["L", "M", "S", "XS"],
@@ -114,7 +110,7 @@ const productData = [
     id: 7,
     title: "Evening Dresses",
     subtitle: "Midnight Gala Maxi Dress",
-    price: 175,
+    price: 175.59, // Updated with two decimal places and random digits
     imgHR: HRNewProductImg3,
     img: NewProductImg3,
     sizes: ["XL", "L", "M", "S", "XS"],
@@ -129,7 +125,7 @@ const productData = [
     id: 8,
     title: "Casual",
     subtitle: "Power Suit Ensemble",
-    price: 120,
+    price: 120.74, // Updated with two decimal places and random digits
     imgHR: HRNewProductImg4,
     img: NewProductImg4,
     sizes: ["XL", "L", "M", "S", "XS"],
@@ -141,5 +137,4 @@ const productData = [
     productDetails: "Empower your wardrobe with this power suit ensemble, offering a tailored fit and bold design for a commanding presence."
   }
 ]
-
 export default productData;

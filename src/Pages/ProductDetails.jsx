@@ -13,8 +13,14 @@ const ProductDetails = () => {
   if (!product) {
     return <div>Product not found</div>;
   }
+
   const [count, setCount] = useState(1);
   const [price, setPrice] = useState(product.price * count);
+  const [cart, setCart] = useState(0);
+
+  const addToCart = () => {
+    setCart(count)
+  }
 
   useEffect(() => {
     setPrice(product.price * count);
@@ -35,7 +41,7 @@ const ProductDetails = () => {
         <MiniNavBar product={product} />
         {/*---------- NavBar  ------------ */}
         <div className='w-full'>
-          <NavBar count={count} />
+          <NavBar cart={cart} />
         </div>
 
         {/*---------- Content ------------ */}
@@ -120,7 +126,7 @@ const ProductDetails = () => {
                       +
                     </button>
                   </div>
-                  <button className='uppercase px-4 py-2 border-black border font-semibold font-mont text-sm'>
+                  <button onClick={addToCart} className='uppercase px-4 py-2 border-black border font-semibold font-mont text-sm hover:bg-black hover:text-white'>
                     Add To Cart
                   </button>
                 </div>

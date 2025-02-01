@@ -1,6 +1,6 @@
-import {  AiOutlineSearch, AiOutlineShopping } from 'react-icons/ai';
+import { AiOutlineSearch, AiOutlineShopping } from 'react-icons/ai';
 
-const NavBar = ({ count }) => {
+const NavBar = ({ cart }) => {
 
   return (
     <div className="flex flex-col md:flex-row justify-between items-center w-full py-6 px-[115px]">
@@ -32,7 +32,7 @@ const NavBar = ({ count }) => {
         <div className="relative">
           <AiOutlineShopping className="w-7 h-7" />
           <span className="absolute -top-2 -right-2 w-4 h-4 bg-black rounded-full text-white text-xs flex items-center justify-center text-center">
-            {count}
+            {cart}
           </span>
         </div>
       </div>
