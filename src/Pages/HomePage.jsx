@@ -12,7 +12,6 @@ import ExploreSection from "../components/ExploreSection/ExploreSection.jsx";
 import FooterSection from "../components/ExploreSection/FotterSection.jsx";
 
 const popularProductData = PopularProductData.filter((data) => data.id <= 4);
-console.log(popularProductData);
 const NewProductData = PopularProductData.filter((data) => data.id > 4);
 console.log(NewProductData);
 const HomePages = () => {

@@ -19,7 +19,7 @@ const MiniNavBar = ({ product }) => {
   }, []);
 
   return (
-    <div className={`fixed inset-0 px-10 md:px-[185px] w-full h-[10vh] bg-white flex justify-between items-center z-50 shadow-md shadow-black/10 transition-all duration-300 transform ${isVisible ? 'translate-y-0' : '-translate-y-full'}`}>
+    <div className={`fixed inset-0 px-10 md:px-[185px] w-full h-[10vh] bg-white flex justify-between items-center z-40 shadow-md shadow-black/10 transition-all duration-300 transform ${isVisible ? 'translate-y-0' : '-translate-y-full'}`}>
       {/* Cont One */}
       <div className='hidden md:flex items-center gap-6'>
         <img className='w-12 h-14' src={product.img} alt={product.title} />

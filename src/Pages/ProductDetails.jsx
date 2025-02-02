@@ -5,6 +5,7 @@ import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import productData from '../Data/ProductData';
 import MiniNavBar from '../components/HeroSection/MiniNavBar';
+import Cart from '../components/HeroSection/Cart';
 import ScrollToTop from '../Validation/ScrollToTop';
 import { use } from 'react';
 
@@ -45,12 +46,13 @@ const ProductDetails = () => {
   };
 
 
-  return (
-    <div className='w-full h-full flex flex-col justify-center items-center overflow-x-hidden'>
-      <div className='px-20'>
 
+
+  return (
+    <div className='w-full h-full flex flex-col justify-center items-center overflow-x-hidden '>
+      <div className='px-20'>
         <ScrollToTop />
-        <MiniNavBar product={product} />
+        {/* <MiniNavBar product={product} /> */}
         {/*---------- NavBar  ------------ */}
         <div className='w-full'>
           <NavBar cart={cart} />

@@ -27,7 +27,7 @@ const ProductCard1 = ({ productData }) => {
             <div className="flex justify-center">
               <Link to={`/product-details/${product.id}`}>
                 <img
-                  className="max-w-86 h-auto md:w-[320px] md:h-[386px]  mt-8 mb-4"
+                  className="max-w-86 h-auto md:w-[320px] md:h-[386px] mt-8 mb-4"
                   src={product.img}
                   alt={product.title}
                 />
