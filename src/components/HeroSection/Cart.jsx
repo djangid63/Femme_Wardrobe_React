@@ -7,7 +7,8 @@ const Cart = ({ product, isCartVisible, setCartVisible }) => {
   };
 
   return (
-    <section className={` ${isCartVisible ? 'grid' : 'hidden'} absolute inset-0 md:grid-cols-[70vw_30vw] grid-cols-1 py-10 w-full min-h-screen place-items-start justify-items-center z-50 `}>
+
+    <section className={`transition-transform duration-700 transform ${isCartVisible ? 'translate-x-0' : '-translate-x-full'} fixed inset-0 w-full h-full bg-black bg-opacity-50 z-50`}>
       {/* Grid 1 70% of the screen */}
       <div className='absolute inset-0 w-screen h-screen '
         style={{

@@ -50,6 +50,7 @@ const ProductDetails = () => {
 
   return (
     <div className='w-full h-full flex flex-col justify-center items-center overflow-x-hidden '>
+      <MiniNavBar product={product} />
       <div className='px-20'>
         <ScrollToTop />
         {/* <MiniNavBar product={product} /> */}
