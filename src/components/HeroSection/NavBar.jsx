@@ -27,11 +27,11 @@ const NavBar = ({ cart }) => {
       {/* Right Icons */}
       <div className="hidden space-x-6 md:flex md:order-3">
         <div className="cursor-pointer">
-          <AiOutlineSearch className="w-7 h-7" />
+          <AiOutlineSearch className="w-8 h-8" />
         </div>
         <div className="relative">
-          <AiOutlineShopping className="w-7 h-7" />
-          <span className="absolute -top-2 -right-2 w-4 h-4 bg-black rounded-full text-white text-xs flex items-center justify-center text-center">
+          <AiOutlineShopping className="w-8 h-8" />
+          <span className="absolute -top-2 -right-3 w-5 h-5 bg-black rounded-full text-white text-xs flex items-center justify-center text-center">
             {cart}
           </span>
         </div>
