@@ -1,7 +1,7 @@
 // src/Cart.js
 import React from 'react';
 
-const Cart = ({ product, isCartVisible, setCartVisible }) => {
+const ShoppingCart = ({ product, isCartVisible, setCartVisible }) => {
   const calculateSubtotal = () => {
     return (product.quantity * product.price).toFixed(2);
   };
@@ -47,4 +47,4 @@ const Cart = ({ product, isCartVisible, setCartVisible }) => {
   );
 };
 
-export default Cart;
+export default ShoppingCart;

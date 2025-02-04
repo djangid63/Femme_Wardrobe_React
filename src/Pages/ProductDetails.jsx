@@ -5,9 +5,7 @@ import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import productData from '../Data/ProductData';
 import MiniNavBar from '../components/HeroSection/MiniNavBar';
-import Cart from '../components/HeroSection/Cart';
 import ScrollToTop from '../Validation/ScrollToTop';
-import { use } from 'react';
 
 const ProductDetails = () => {
   const { id } = useParams();

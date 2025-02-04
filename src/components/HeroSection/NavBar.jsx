@@ -1,7 +1,7 @@
 import { AiOutlineSearch, AiOutlineShopping } from 'react-icons/ai';
 import { useEffect, useState } from 'react';
 import '../../index.css';
-import Cart from './Cart';
+import ShoppingCart from './ShoppingCart';
 
 const NavBar = ({ cart }) => {
   // Cart Visible State
@@ -48,7 +48,7 @@ const NavBar = ({ cart }) => {
         </div>
       </div>
       {isCartVisible && (
-        <Cart
+        <ShoppingCart
           product={cart}
           isCartVisible={isCartVisible}
           setCartVisible={setCartVisible}
