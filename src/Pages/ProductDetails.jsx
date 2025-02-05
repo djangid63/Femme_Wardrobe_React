@@ -54,7 +54,7 @@ const ProductDetails = () => {
         {/* <MiniNavBar product={product} /> */}
         {/*---------- NavBar  ------------ */}
         <div className='w-full'>
-          <NavBar cart={cart} />
+          <NavBar cart={cart} product={product} />
         </div>
 
         {/*---------- Content ------------ */}

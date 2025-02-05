@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import '../../index.css';
 import ShoppingCart from './ShoppingCart';
 
-const NavBar = ({ cart }) => {
+const NavBar = ({ cart, product }) => {
   // Cart Visible State
   const [isCartVisible, setCartVisible] = useState(false);
 
@@ -49,7 +49,8 @@ const NavBar = ({ cart }) => {
       </div>
       {isCartVisible && (
         <ShoppingCart
-          product={cart}
+          product={product}
+          count={cart}
           isCartVisible={isCartVisible}
           setCartVisible={setCartVisible}
         />
