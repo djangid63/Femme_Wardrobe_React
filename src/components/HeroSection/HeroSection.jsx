@@ -5,6 +5,7 @@ import {
   AiOutlineShopping,
   AiOutlineMenu,
 } from "react-icons/ai";
+import { Link } from "react-router-dom";
 
 function App() {
   return (
@@ -31,7 +32,9 @@ function App() {
           <ul className="items-center justify-center hidden text-sm font-semibold gap-x-4 font-mont md:flex whitespace-nowrap">
             <li className="cursor-pointer hover:underline">Home</li>
             <li className="cursor-pointer hover:underline">Shop</li>
-            <li className="cursor-pointer hover:underline">About Us</li>
+            <Link to="/about">
+              <li className="cursor-pointer hover:underline">About Us</li>
+            </Link>
             <li className="cursor-pointer hover:underline">Contact Us</li>
           </ul>
 
@@ -60,10 +63,10 @@ function App() {
         {/* Welcome Message */}
         <div className="flex items-center justify-center flex-grow ">
           <div className="flex justify-center items-center flex-col gap-2 w-[50%] h-[50%]">
-            <p className="clear-both text-white font-mont font-semibold text-[12px] tracking-[2px] leading-[13.75px] break-words uppercase">
+            <p className="clear-both text-white font-mont font-semibold md:text-[12px] text-[10px] tracking-[2px] leading-[13.75px] break-words uppercase">
               Casual & Everyday
             </p>
-            <h1 className="md:text-[76px] text-4xl font-bold italic break-words text-center font-mainHead leading-none mb-6">
+            <h1 className="md:text-[76px] text-2xl font-bold italic break-words text-center font-mainHead leading-none mb-6">
               Effortlessly Blend Comfort & Style!
             </h1>
             <p className="font-mont text-[8px] md:text-[16px] font-semibold text-center mb-4">
@@ -72,7 +75,7 @@ function App() {
               tees, and relaxed-fit joggers for your everyday adventures
             </p>
             <div>
-              <button className="text-[14px] uppercase text-white border border-white font-mont font-semibold  py-4 px-11 hover:bg-white hover:text-black">
+              <button className="md:text-[14px] text-sm uppercase text-white border border-white font-mont font-semibold  md:py-4 md:px-10 py-2 px-4 hover:bg-white hover:text-black">
                 View Collection
               </button>
             </div>
