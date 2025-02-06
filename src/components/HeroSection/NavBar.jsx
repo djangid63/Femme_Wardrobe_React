@@ -2,6 +2,7 @@ import { AiOutlineSearch, AiOutlineShopping } from 'react-icons/ai';
 import { useEffect, useState } from 'react';
 import '../../index.css';
 import ShoppingCart from './ShoppingCart';
+import { Link } from 'react-router-dom';
 
 const NavBar = ({ cart, product }) => {
   // Cart Visible State
@@ -20,7 +21,9 @@ const NavBar = ({ cart, product }) => {
       <ul className="hidden lg:flex items-center justify-center text-[15px] font-semibold gap-x-7 font-mont whitespace-nowrap">
         <li className="cursor-pointer hover:underline">Home</li>
         <li className="cursor-pointer hover:underline">Shop</li>
-        <li className="cursor-pointer hover:underline">About Us</li>
+        <Link to='/about'>
+          <li className="cursor-pointer hover:underline">About Us</li>
+        </Link>
         <li className="cursor-pointer hover:underline">Contact Us</li>
       </ul>
       {/* Middle Brand */}
