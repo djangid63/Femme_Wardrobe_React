@@ -9,7 +9,7 @@ const NavBarWhite = () => {
       <div className='flex w-[100vw] items-center justify-evenly '>
         {/* Left Navigation */}
         <AiOutlineMenu className="m-2 md:hidden" />
-        <ul className="text-white items-center justify-center hidden text-sm font-semibold gap-x-4 font-mont md:flex whitespace-nowrap">
+        <ul className="text-white items-center justify-center hidden text-sm font-semibold gap-x-8 font-mont md:flex whitespace-nowrap">
           <li className="cursor-pointer hover:underline">Home</li>
           <li className="cursor-pointer hover:underline">Shop</li>
           <li className="cursor-pointer hover:underline">About Us</li>
