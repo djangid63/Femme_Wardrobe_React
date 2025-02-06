@@ -24,7 +24,7 @@ const ProductDetails = () => {
   useEffect(() => {
     setTimeout(() => {
       setSimmering(false);
-    }, 1500);
+    }, 2000);
   }, []);
 
   const addToCart = () => {
@@ -43,9 +43,6 @@ const ProductDetails = () => {
     setCount((prevCount) => (prevCount > 1 ? prevCount - 1 : prevCount));
   };
 
-
-
-
   return (
     <div className='w-full h-full flex flex-col justify-center items-center overflow-x-hidden '>
       <MiniNavBar product={product} />
@@ -63,12 +60,12 @@ const ProductDetails = () => {
             {/* Grid 1 - Image */}
             {isSimmering ? (
               /* Simmer Effect Skeleton */
-              <div className='w-full mt-4 max-w-[670px] h-[750px] flex justify-center items-center bg-gray-300 animate-pulse'>
+              <div className='w-[33vw] mt-4 max-w-[600px] h-[650px] flex justify-center items-center animate-pulse bg-slate-200 '>
               </div>
             ) : (
               <div className='w-full max-w-[750px] h-auto flex justify-end items-center p-4'>
                 <img
-                  className='w-full h-auto max-h-[750px] object-contain scale-invert'
+                  className='w-full h-auto max-h-[635px] object-contain scale-invert'
                   src={product.imgHR}
                   alt={`Image of ${product.collection}`}
                   loading="lazy"
