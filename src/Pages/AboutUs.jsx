@@ -4,10 +4,12 @@ import CustomerCentric from '../components/AboutUsSection/CustomerCentric'
 import Initiatives from '../components/AboutUsSection/Initiatives'
 import ExploreSection from './../components/ExploreSection/ExploreSection';
 import FotterSection from './../components/ExploreSection/FotterSection';
+import ScrollToTop from '../Validation/ScrollToTop';
 
 const AboutUs = () => {
   return (
     <div>
+      <ScrollToTop />
       <AboutHome />
       <CustomerCentric />
       <Initiatives />

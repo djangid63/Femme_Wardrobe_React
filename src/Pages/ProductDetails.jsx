@@ -1,5 +1,5 @@
 import React from 'react';
-import NavBar from '../components/HeroSection/NavBar';
+import CartNavBar from '../components/HeroSection/CartNavBar';
 import FooterSection from '../components/ExploreSection/FotterSection';
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
@@ -45,27 +45,27 @@ const ProductDetails = () => {
 
   return (
     <div className='w-full h-full flex flex-col justify-center items-center overflow-x-hidden '>
+      <ScrollToTop />
       <MiniNavBar product={product} />
       <div className='px-20'>
         <ScrollToTop />
-        {/* <MiniNavBar product={product} /> */}
         {/*---------- NavBar  ------------ */}
         <div className='w-full'>
-          <NavBar cart={cart} product={product} />
+          <CartNavBar cart={cart} product={product} />
         </div>
 
         {/*---------- Content ------------ */}
         <div className='w-full'>
-          <section className='grid md:grid-cols-[1fr_1fr] grid-cols-1 py-10 w-full min-h-screen place-items-start justify-items-center'>
+          <section className='grid md:grid-cols-[1fr_1fr] grid-cols-1 py-10 w-full min-h-screen place-content-end px-32 justify-items-end'>
             {/* Grid 1 - Image */}
             {isSimmering ? (
               /* Simmer Effect Skeleton */
               <div className='w-[33vw] mt-4 max-w-[600px] h-[650px] flex justify-center items-center animate-pulse bg-slate-200 '>
               </div>
             ) : (
-              <div className='w-full max-w-[750px] h-auto flex justify-end items-center p-4'>
+              <div className='w-full max-w-[750px] h-auto p-4'>
                 <img
-                  className='w-full h-auto max-h-[635px] object-contain scale-invert'
+                  className='w-full h-auto max-h-[635px] object-contain'
                   src={product.imgHR}
                   alt={`Image of ${product.collection}`}
                   loading="lazy"
@@ -73,9 +73,6 @@ const ProductDetails = () => {
                 />
               </div>
             )}
-
-
-            {/* Grid 2 - Details */}
             <div className='w-full max-w-[700px] h-auto p-4'>
               <div className='flex flex-col gap-4'>
                 <h6 className='font-mont font-semibold text-gray-400 cursor-pointer text-sm capitalize'>

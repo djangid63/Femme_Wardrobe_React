@@ -10,12 +10,14 @@ import ReviewSection from "../components/ReviewSection/ReviewSection.jsx";
 import FeaturesSection from "../components/ReviewSection/featuresSection.jsx";
 import ExploreSection from "../components/ExploreSection/ExploreSection.jsx";
 import FooterSection from "../components/ExploreSection/FotterSection.jsx";
+import ScrollToTop from '../Validation/ScrollToTop.jsx';
 
 const popularProductData = PopularProductData.filter((data) => data.id <= 4);
 const NewProductData = PopularProductData.filter((data) => data.id > 4);
 const HomePages = () => {
   return (
     <div className='overflow-x-hidden'>
+      <ScrollToTop />
       <HeroSection />
       <ProductCard1 productData={popularProductData} />
       <BagSection />

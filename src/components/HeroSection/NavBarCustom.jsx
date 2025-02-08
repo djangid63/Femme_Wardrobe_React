@@ -10,8 +10,12 @@ const NavBarCustom = ({ navBarTextColor, navBarBgColor }) => {
         {/* Left Navigation */}
         <AiOutlineMenu className="m-2 md:hidden" />
         <ul className={`text-${navBarTextColor} items-center justify-center hidden text-sm font-semibold gap-x-8 font-mont md:flex whitespace-nowrap`}>
-          <li className="cursor-pointer hover:underline">Home</li>
-          <li className="cursor-pointer hover:underline">Shop</li>
+          <Link to='/'>
+            <li className="cursor-pointer hover:underline">Home</li>
+          </Link>
+          <Link to='/shop'>
+            <li className="cursor-pointer hover:underline">Shop</li>
+          </Link>
           <Link to='/about'>
             <li className="cursor-pointer hover:underline">About Us</li>
           </Link>
