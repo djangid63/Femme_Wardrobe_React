@@ -52,7 +52,7 @@ const NewProductCard = ({ newProductData }) => {
                   <button
                     key={sizeIndex}
                     onClick={() => handleProductPrice(size, index)}
-                    className="py-[2.5px] px-3 font-semibold cursor-pointer text-[14px] border border-black text-gray-400 rounded-[4px]"
+                    className="py-[2.5px] px-[8px] lg:px-[10px] font-semibold cursor-pointer md:text-[10px] lg:text-[14px] border border-black text-gray-400 rounded-[4px]"
                   >
                     {size}
                   </button>

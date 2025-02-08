@@ -8,7 +8,7 @@ const NavBarCustom = ({ navBarTextColor, navBarBgColor }) => {
     <div className={`flex justify-center items-center md:justify-between py-4 overflow-x-hidden bg-${navBarBgColor}`}>
       <div className='flex w-[100vw] items-center justify-evenly '>
         {/* Left Navigation */}
-        <AiOutlineMenu className="m-2 md:hidden" />
+        <AiOutlineMenu className={`m-2 md:hidden text-${navBarTextColor}`} />
         <ul className={`text-${navBarTextColor} items-center justify-center hidden text-sm font-semibold gap-x-8 font-mont md:flex whitespace-nowrap`}>
           <Link to='/'>
             <li className="cursor-pointer hover:underline">Home</li>
@@ -19,7 +19,9 @@ const NavBarCustom = ({ navBarTextColor, navBarBgColor }) => {
           <Link to='/about'>
             <li className="cursor-pointer hover:underline">About Us</li>
           </Link>
+          <Link to='/contact'>
           <li className="cursor-pointer hover:underline">Contact Us</li>
+          </Link>
         </ul>
 
         {/* Middle Brand */}

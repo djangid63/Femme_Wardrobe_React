@@ -20,10 +20,10 @@ const AboutUs = () => {
       </div>
 
       {/* Part 2nd */}
-      <div className='w-full px-24 py-16 grid grid-cols-1 lg:grid-cols-2 grid-rows-[1fr_0.3fr_1fr] gap-8 place-items-center'>
+      <div className='w-full md:px-24 md:py-16 grid grid-cols-1 lg:grid-cols-2 grid-rows-[1fr_0.3fr_1fr] gap-8 place-items-center'>
         {/* Grid 1 */}
-        <div className='h-80 col-span-2 grid grid-cols-1 lg:grid-cols-2 items-start justify-center gap-3'>
-          <div className='h-80 flex flex-col items-start justify-start md:justify-center '>
+        <div className='h-80 w-[87%] col-span-2 grid grid-cols-1 lg:grid-cols-2 items-start justify-center gap-3'>
+          <div className='h-80  flex flex-col items-start justify-start md:justify-center '>
             <h1 className='font-mainHead text-5xl md:text-6xl italic font-bold leading-tight'>From Vision to Vogue:</h1>
             <h1 className='font-mainHead text-5xl md:text-6xl italic font-bold leading-tight'> The Birth of</h1>
             <h1 className='font-mainHead text-5xl md:text-6xl italic font-bold leading-tight'>  FemmeWardrobe</h1>

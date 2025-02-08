@@ -1,11 +1,11 @@
 import React from 'react'
 import NavBarCustom from '../HeroSection/NavBarCustom'
-import ReinventedBgImg from '../../images/BgImages/ReinventingBgImg.jpeg'
+import ContactUsBgImg from '../../images/BgImages/ContactUsBgImg.jpeg'
 
-const ShopHomePage = () => {
+const ContactHome = () => {
   return (
     <div className='w-full h-[80vh] flex flex-col items-center justify-start relative'>
-      <img className='absolute inset-0 w-full h-[85vh] object-cover object-right-top' src={ReinventedBgImg} />
+      <img className='absolute inset-0 w-full h-[85vh] object-cover object-right-top' src={ContactUsBgImg} />
       {/* Overlay */}
       <div className='absolute inset-0 w-full h-[85vh] bg-black opacity-50'></div>
       <div className='absolute'>
@@ -22,4 +22,4 @@ const ShopHomePage = () => {
   )
 }
 
-export default ShopHomePage
+export default ContactHome

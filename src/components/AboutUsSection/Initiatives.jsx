@@ -3,7 +3,7 @@ import React from 'react'
 const Initiatives = () => {
   return (
     <section className='h-[80vh] w-full bg-white flex items-center justify-center '>
-      <div className='grid grid-cols-2 grid-rows-[0.3fr_1fr] py-10 px-48 gap-20'>
+      <div className='grid grid-cols-2 grid-rows-[0.3fr_1fr] md:py-10 md:px-48 md:gap-20 gap-10'>
         <div className=' col-span-2 row-span-1 flex flex-col items-start justify-start'>
           <p className='antialiased box-border clear-both font-mont text-[11px] font-semibold tracking-[2px] leading-[13.75px] break-words uppercase'>Sustainability Initiatives</p>
 
@@ -22,7 +22,7 @@ const Initiatives = () => {
         </div>
       </div>
 
-   
+
     </section>
   )
 }
