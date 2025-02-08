@@ -1,9 +1,10 @@
 import React from 'react'
 import AboutUsbgImg from '../../images/BgImages/AboutUsBgImg.jpeg';
-import NavBarWhite from '../HeroSection/NavBarWhite'
+import NavBarCustom from './../HeroSection/NavBarCustom';
 
 
 const AboutUs = () => {
+  const navTextColor = 'white';
   return (
     <section className='w-full h-[100%] overflow-x-hidden'>
       <div className='w-full h-[70vh] flex flex-col items-center justify-start relative'>
@@ -11,7 +12,7 @@ const AboutUs = () => {
         {/* Overlay */}
         <div className='absolute inset-0 w-full h-[75vh] bg-black opacity-50'></div>
         <div className='absolute'>
-          <NavBarWhite />
+          <NavBarCustom navBarTextColor={navTextColor} />
         </div>
         <div className='absolute top-[48%] mr-8 text-white'>
           <h1 className='text-7xl font-bold font-mainHead italic'>About Us</h1>
