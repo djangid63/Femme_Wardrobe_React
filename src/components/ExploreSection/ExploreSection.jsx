@@ -17,7 +17,7 @@ const ExploreSection = () => {
           background: 'linear-gradient(to right, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.9))'
         }}
       ></div>
-      <div className="absolute inset-0 flex flex-col justify-center md:items-end items-center w-[100%] h-[80%] text-white md:px-44 px-0">
+      <div className="absolute inset-0 flex flex-col md:justify-center md:items-end items-center w-[100%] h-[100%] text-white md:px-44 px-0">
         <p className="md:w-[33vw] w-[50vw] font-mont font-semibold text-[12px] md:text-[12px] tracking-[2px] leading-[13.75px] break-words uppercase mb-3">
           Explore
         </p>

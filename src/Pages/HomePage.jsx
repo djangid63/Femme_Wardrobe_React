@@ -13,7 +13,6 @@ import FooterSection from "../components/ExploreSection/FotterSection.jsx";
 
 const popularProductData = PopularProductData.filter((data) => data.id <= 4);
 const NewProductData = PopularProductData.filter((data) => data.id > 4);
-console.log(NewProductData);
 const HomePages = () => {
   return (
     <div className='overflow-x-hidden'>

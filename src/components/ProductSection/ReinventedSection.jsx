@@ -18,7 +18,7 @@ const ReinventedSection = () => {
           background: 'linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.1))'
         }}
       ></div>
-      <div className='absolute z-20 md:-top-24 md:left-[170px] flex flex-col items-center md:items-start justify-center text-white w-[100%] h-[100%]'>
+      <div className='absolute z-20 md:-top-20 md:left-[150px] flex flex-col items-center md:items-start justify-center text-white w-[100%] h-[100%]'>
         <div>
           <img className='md:w-[516px] w-[300px] h-auto mb-5' src={reinventedModel} />
 
