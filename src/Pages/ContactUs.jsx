@@ -3,12 +3,16 @@ import ScrollToTop from '../Validation/ScrollToTop'
 import ContactHome from '../components/ContactSection/ContactHome'
 import FooterSection from '../components/ExploreSection/FotterSection'
 import FeaturesSection from '../components/ReviewSection/featuresSection'
+import Form from '../components/ContactSection/Form'
+import ReviewSection from '../components/ReviewSection/ReviewSection'
 
 const ContactUs = () => {
   return (
     <div className='overflow-x-hidden'>
       <ScrollToTop />
       <ContactHome />
+      <Form />
+      <ReviewSection />
       <FeaturesSection />
       <FooterSection />
     </div>

@@ -5,9 +5,9 @@ import ContactUsBgImg from '../../images/BgImages/ContactUsBgImg.jpeg'
 const ContactHome = () => {
   return (
     <div className='relative w-full h-[80vh] flex flex-col items-center justify-start'>
-      <img className='absolute inset-0 w-full h-[85vh] object-cover' src={ContactUsBgImg} />
+      <img className='absolute inset-0 w-full h-[80vh] object-cover' src={ContactUsBgImg} />
       {/* Overlay */}
-      <div className='absolute inset-0 w-full h-[85vh] bg-black opacity-50'></div>
+      <div className='absolute inset-0 w-full h-[80vh] bg-black opacity-50'></div>
       <div className='absolute'>
         <NavBarCustom navBarTextColor={'white'} navBarBgColor={'transparent'} />
       </div>

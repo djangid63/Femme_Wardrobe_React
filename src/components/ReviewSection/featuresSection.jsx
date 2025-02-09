@@ -6,77 +6,53 @@ import securePayment from '../../images/Icons/SecurePayment.svg';
 
 const FeaturesSection = () => {
   return (
-    <section className='w-full h-[50vh] flex flex-col items-center justify-center overflow-x-hidden'>
-      <div className='w-[100%] h-[100%] md:h-auto px-8 md:px-32 grid lg:grid-cols-4 sm:grid-cols-2 grid-cols-1 items-end justify-center bg-white text-black text-center gap-10 md:gap-20'>
+    <section className='w-full md:h-[40vh] sm:h-[100vh] flex flex-col items-center justify-center overflow-x-hidden'>
+      <div className='w-[100%] h-[100%] md:h-auto px-8 md:px-32 grid lg:grid-cols-4 grid-cols-1 items-end justify-center bg-white text-black text-center gap-10 p-4 md:gap-20'>
         {/* Secure Payments */}
-        <div >
+        <div className='w-[100%] h-[100%] flex flex-col items-center justify-start gap-0'>
           <img src={securePayment} alt="securePayment" className='w-7 h-7 justify-self-center' />
           <h2 className='font-mainHead italic font-bold capitalize text-xl md:text-3xl my-2 md:my-4'>Secure Payments</h2>
-          <p className='font-mont text-gray-400 font-semibold text-sm md:text-base'>
-            Shop with confidence knowing
-            <span className="hidden md:inline">
-              <br />
-            </span>
-            that your transactions are
-            <span className="hidden md:inline">
-              <br />
-            </span>
-            safeguarded.
-          </p>
+          <div className='font-mont text-gray-400 font-semibold text-xs md:text-[14px]'>
+            <p>Shop with confidence knowing</p>
+            <p>that your transactions are</p>
+            <p>safeguarded.</p>
+          </div>
         </div>
 
         {/* Free Shipping */}
-        <div>
+        <div className='w-[100%] h-[100%] flex flex-col items-center justify-start gap-0'>
           <img src={shippingIcon} alt="shippingIcon" className='w-7 h-7 justify-self-center' />
           <h2 className='font-mainHead italic font-bold capitalize text-xl md:text-3xl my-2 md:my-4'>Free Shipping</h2>
-          <p className='font-mont text-gray-400 font-semibold text-sm md:text-base'>
-            Shopping with no extra charges -{' '}
-            <span className="hidden md:inline">
-              <br />
-            </span>{' '}
-            savor the liberty of complimentary{' '}
-            <span className="hidden md:inline">
-              <br />
-            </span>{' '}
-            shipping on every order.
-          </p>
+          <div className='font-mont text-gray-400 font-semibold text-xs md:text-[14px]'>
+            <p>Shopping with no extra charges-</p>
+            <p>savor the liberty of complimentary</p>
+            <p>shipping on every order.</p>
+          </div>
         </div>
 
         {/* Easy Returns */}
-        <div>
+        <div className='w-[100%] h-[100%] flex flex-col items-center justify-start gap-0'>
           <img src={returnIcon} alt="returnIcon" className='w-7 h-7 justify-self-center' />
           <h2 className='font-mainHead italic font-bold capitalize text-xl md:text-3xl my-2 md:my-4'>Easy Returns</h2>
-          <p className='font-mont text-gray-400 font-semibold text-sm md:text-base'>
-            With our hassle-free Easy Returns,{' '}
-            <span className="hidden md:inline">
-              <br />
-            </span>{' '}
-            changing your mind has never{' '}
-            <span className="hidden md:inline">
-              <br />
-            </span>{' '}
-            been more convenient.
-          </p>
+          <div className='font-mont text-gray-400 font-semibold text-xs md:text-[14px]'>
+            <p>With our hassle-free Easy Returns, </p>
+            <p>changing your mind has never</p>
+            <p>been more convenient.</p>
+          </div>
         </div>
 
         {/* Order Tracking */}
-        <div>
+        <div className='w-[100%] h-[100%] flex flex-col items-center justify-start gap-0'>
           <img src={orderTracking} alt="orderTracking" className='w-7 h-7 justify-self-center' />
           <h2 className='font-mainHead italic font-bold capitalize text-xl md:text-3xl my-2 md:my-4'>Order Tracking</h2>
-          <p className='font-mont text-gray-400 font-semibold text-sm md:text-base'>
-            Stay in the loop with our Order{' '}
-            <span className="hidden md:inline">
-              <br />
-            </span>{' '}
-            Tracking feature - from checkout{' '}
-            <span className="hidden md:inline">
-              <br />
-            </span>{' '}
-            to your doorstep.
-          </p>
+          <div className='font-mont text-gray-400 font-semibold text-xs md:text-[14px]'>
+            <p>Stay in the loop with our Order</p>
+            <p>Tracking feature - from checkout</p>
+            <p>to your doorstep.</p>
+          </div>
         </div>
       </div>
-    </section >
+    </section>
   );
 };
 
