@@ -1,7 +1,7 @@
 import React from 'react'
 import { AiOutlineSearch, AiOutlineShopping, AiOutlineMenu } from 'react-icons/ai';
-import '../../index.css';
 import { Link } from 'react-router-dom';
+import '../../index.css';
 
 const NavBarCustom = ({ navBarTextColor, navBarBgColor }) => {
   return (
@@ -20,7 +20,7 @@ const NavBarCustom = ({ navBarTextColor, navBarBgColor }) => {
             <li className="cursor-pointer hover:underline">About Us</li>
           </Link>
           <Link to='/contact'>
-          <li className="cursor-pointer hover:underline">Contact Us</li>
+            <li className="cursor-pointer hover:underline">Contact Us</li>
           </Link>
         </ul>
 

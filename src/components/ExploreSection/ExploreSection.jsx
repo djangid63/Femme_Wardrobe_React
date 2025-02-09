@@ -32,7 +32,6 @@ const ExploreSection = () => {
             <button className="text-[10px] md:text-[14px] uppercase text-white border border-white font-mont font-semibold py-3 px-8 md:py-4 md:px-11 hover:bg-white hover:text-black">
               Shop Now
             </button>
-
           </div>
         </div>
       </div>

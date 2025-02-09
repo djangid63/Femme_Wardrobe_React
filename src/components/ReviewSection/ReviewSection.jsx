@@ -4,15 +4,15 @@ import { AiFillStar } from "react-icons/ai";
 
 const ReviewSection = () => {
   return (
-    <div className='relative flex items-center justify-center w-screen h-screen bg-white'>
-      <div className='absolute inset-0 bg-center bg-cover w-[100%] h-[90%] ' style={{
+    <div className='relative h-[90vh] flex items-center justify-center w-screen bg-white'>
+      <div className='absolute inset-0 bg-center bg-cover w-[100%] h-[100%] ' style={{
         backgroundImage: `url(${reviewBgImg})`,
         backgroundAttachment: 'fixed',
       }}
         role="img"
         aria-label="Review Background">
       </div>
-      <div className='absolute inset-0 bg-black bg-opacity-50 w-[100%] h-[90%]'></div>
+      <div className='absolute inset-0 bg-black bg-opacity-50 w-[100%] h-[100%]'></div>
       <div className='absolute flex flex-col gap-4 text-center'>
         <div className='flex justify-center '>
           {[...Array(5)].map((_, index) => (

@@ -6,10 +6,10 @@ import securePayment from '../../images/Icons/SecurePayment.svg';
 
 const FeaturesSection = () => {
   return (
-    <section>
-      <div className='w-[100%] h-[100%] md:h-auto px-8 md:px-32 mb-14 grid lg:grid-cols-4 sm:grid-cols-2 grid-cols-1 items-center justify-center bg-white text-black text-center gap-10 md:gap-20'>
+    <section className='w-full h-[50vh] flex flex-col items-center justify-center overflow-x-hidden'>
+      <div className='w-[100%] h-[100%] md:h-auto px-8 md:px-32 grid lg:grid-cols-4 sm:grid-cols-2 grid-cols-1 items-end justify-center bg-white text-black text-center gap-10 md:gap-20'>
         {/* Secure Payments */}
-        <div>
+        <div >
           <img src={securePayment} alt="securePayment" className='w-7 h-7 justify-self-center' />
           <h2 className='font-mainHead italic font-bold capitalize text-xl md:text-3xl my-2 md:my-4'>Secure Payments</h2>
           <p className='font-mont text-gray-400 font-semibold text-sm md:text-base'>
@@ -76,7 +76,7 @@ const FeaturesSection = () => {
           </p>
         </div>
       </div>
-    </section>
+    </section >
   );
 };
 

@@ -20,8 +20,7 @@ const ReinventedSection = () => {
       ></div>
       <div className='absolute z-20 md:-top-20 md:left-[150px] flex flex-col items-center md:items-start justify-center text-white w-[100%] h-[100%]'>
         <div>
-          <img className='md:w-[516px] w-[300px] h-auto mb-5' src={reinventedModel} />
-
+          <img className='md:w-[440px] w-[200px] h-auto mb-5' src={reinventedModel} />
           <h1 className="md:text-[50px] text-2xl font-bold italic break-words text-start capitalize font-mainHead leading-none mb-4">
             Discover the allure of <br /> fashion reinvented!
           </h1>

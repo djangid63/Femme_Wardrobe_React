@@ -6,7 +6,7 @@ import FeaturesSection from '../components/ReviewSection/featuresSection'
 
 const ContactUs = () => {
   return (
-    <div>
+    <div className='overflow-x-hidden'>
       <ScrollToTop />
       <ContactHome />
       <FeaturesSection />
