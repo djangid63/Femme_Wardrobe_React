@@ -3,7 +3,7 @@ import React from 'react';
 
 const ShoppingCart = ({ product, count, isCartVisible, setCartVisible }) => {
   const calculateSubtotal = () => {
-    return (product.quantity * product.price).toFixed(2);
+    return (parseInt(count * product.price)).toFixed(2);
   };
 
   return (

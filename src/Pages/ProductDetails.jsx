@@ -48,7 +48,6 @@ const ProductDetails = () => {
       <ScrollToTop />
       <MiniNavBar product={product} />
       <div className='px-20'>
-        <ScrollToTop />
         {/*---------- NavBar  ------------ */}
         <div className='w-full'>
           <CartNavBar cart={cart} product={product} />
@@ -60,7 +59,7 @@ const ProductDetails = () => {
             {/* Grid 1 - Image */}
             {isSimmering ? (
               /* Simmer Effect Skeleton */
-              <div className='w-[33vw] mt-4 max-w-[600px] h-[650px] flex justify-center items-center animate-pulse bg-slate-200 '>
+              <div className='w-[38vw] mt-4 max-w-[635px] h-[630px] flex justify-start items-center animate-pulse bg-slate-200 '>
               </div>
             ) : (
               <div className='w-full max-w-[750px] h-auto p-4'>
@@ -142,7 +141,7 @@ const ProductDetails = () => {
                       +
                     </button>
                   </div>
-                  <button onClick={addToCart} className='uppercase px-4 py-2 border-black border font-semibold font-mont text-sm hover:bg-black hover:text-white'>
+                  <button onClick={() => { addToCart(); }} className='uppercase px-4 py-2 border-black border font-semibold font-mont text-sm hover:bg-black hover:text-white'>
                     Add To Cart
                   </button>
                 </div>
