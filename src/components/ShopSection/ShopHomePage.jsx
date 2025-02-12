@@ -14,8 +14,7 @@ const ShopHomePage = () => {
       <div className='absolute top-[48%] mr-8 text-white '>
         <h1 className='text-8xl font-bold font-mainHead mb-3'>Shop</h1>
         <div className='flex items-end gap-2 ml-4'>
-          <span className='text-sm font-semibold font-mont'>Home -</span>
-          <span className='text-sm font-semibold font-mont'> - Shop</span>
+
         </div>
       </div>
     </div>

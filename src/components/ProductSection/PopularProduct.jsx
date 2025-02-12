@@ -69,7 +69,6 @@ const ProductCard1 = ({ productData }) => {
               </div>
             </div>
           </div>
-
         ))}
       </div>
     </div>
