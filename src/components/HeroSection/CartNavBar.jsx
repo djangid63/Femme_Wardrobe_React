@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import ShoppingCart from './ShoppingCart';
 import { Link } from 'react-router-dom';
 
-const NavBar = ({ cart, product }) => {
+const NavBar = ({ cart, product, setCart }) => {
   // Cart Visible State
   const [isCartVisible, setCartVisible] = useState(false);
 
@@ -58,6 +58,7 @@ const NavBar = ({ cart, product }) => {
           count={cart}
           isCartVisible={isCartVisible}
           setCartVisible={setCartVisible}
+          setCart = {setCart}
         />
       )}
     </div>

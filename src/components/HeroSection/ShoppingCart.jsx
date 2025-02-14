@@ -1,7 +1,7 @@
 // src/Cart.js
 import React from 'react';
 
-const ShoppingCart = ({ product, count, isCartVisible, setCartVisible }) => {
+const ShoppingCart = ({ product, count, isCartVisible, setCartVisible, setCart }) => {
   const calculateSubtotal = () => {
     return (parseInt(count * product.price)).toFixed(2);
   };
@@ -29,7 +29,7 @@ const ShoppingCart = ({ product, count, isCartVisible, setCartVisible }) => {
                 <p>Size: {product.size}</p>
                 <p>{count} x ${product.price}</p>
               </div>
-              <button onClick={() => setCartVisible(false)} className="ml-auto px-2 py-[2px] text-gray-300 border border-gray-300 rounded-full">X</button>
+              <button onClick={() => { setCartVisible(false), setCart(0) }} className="ml-auto px-2 py-[2px] text-gray-300 border border-gray-300 rounded-full">X</button>
             </div>
           </div>
           <div>
@@ -50,7 +50,7 @@ const ShoppingCart = ({ product, count, isCartVisible, setCartVisible }) => {
           <div className='flex justify-between p-6'>
             <h2 className="text-lg font-bold mb-4 font-mont">Shopping Cart</h2>
             <div>
-              <button onClick={() => setCartVisible(false)} className="ml-auto w-8 h-8 py-[2px] text-gray-300 border border-gray-300 rounded-full">X</button>
+              <button onClick={() => { setCartVisible(false), console.log(setCart) }} className="ml-auto w-8 h-8 py-[2px] text-gray-300 border border-gray-300 rounded-full">X</button>
             </div>
           </div>
           {/* <div className="absolute inset-0 font-mont border-t-[0.2px] border-gray-300 w-[100vw] h-[100vh]"></div> */}

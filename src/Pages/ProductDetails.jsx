@@ -28,7 +28,8 @@ const ProductDetails = () => {
   }, []);
 
   const addToCart = () => {
-    setCart(count)
+    setCart((prevCart) => prevCart + count);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
   useEffect(() => {
@@ -50,7 +51,7 @@ const ProductDetails = () => {
       <div className='px-20'>
         {/*---------- NavBar  ------------ */}
         <div className='w-full'>
-          <CartNavBar cart={cart} product={product} />
+          <CartNavBar cart={cart} product={product} setCart={setCart} />
         </div>
 
         {/*---------- Content ------------ */}
@@ -96,7 +97,7 @@ const ProductDetails = () => {
                 {product.sizes.map((size, index) => (
                   <button
                     key={index}
-                    className='py-1 px-3 font-semibold cursor-pointer md:text-[12px] sm:text-sm border border-black text-gray-400 rounded'
+                    className='py-1 px-3 font-semibold cursor-pointer md:text-[12px] sm:text-sm border border-black text-gray-400 rounded focus:outline-none focus:ring-1 focus:ring-gray-400 hover:bg-black hover:text-white'
                   >
                     {size}
                   </button>
