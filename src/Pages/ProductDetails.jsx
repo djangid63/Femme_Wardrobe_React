@@ -97,7 +97,7 @@ const ProductDetails = () => {
                 {product.sizes.map((size, index) => (
                   <button
                     key={index}
-                    className='py-1 px-3 font-semibold cursor-pointer md:text-[12px] sm:text-sm border border-black text-gray-400 rounded focus:outline-none focus:ring-1 focus:ring-gray-400 hover:bg-black hover:text-white'
+                    className='py-1 px-3 font-semibold cursor-pointer md:text-[12px] sm:text-sm border border-black text-gray-400 rounded focus:outline-none focus:ring-1 focus:ring-gray-500 hover:bg-black hover:text-white'
                   >
                     {size}
                   </button>
