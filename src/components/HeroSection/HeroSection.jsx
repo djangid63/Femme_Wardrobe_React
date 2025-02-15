@@ -1,9 +1,9 @@
 import React from "react";
 import logo from "../../images/BgImages/HeroBgImg.jpeg";
 import NavBarCustom from "./NavBarCustom";
-import { Link } from "react-router-dom";
 
 function App() {
+
   return (
     <div className="relative flex items-center justify-center w-screen h-screen overflow-hidden">
       <div
@@ -39,16 +39,16 @@ function App() {
               tees, and relaxed-fit joggers for your everyday adventures
             </p>
             <div>
-              <Link to="/shop">
-                <button className="md:text-[14px] text-sm uppercase text-white border border-white font-mont font-semibold  md:py-4 md:px-10 py-2 px-4 hover:bg-white hover:text-black">
-                  View Collection
-                </button>
-              </Link>
+              <button className="md:text-[14px] text-sm uppercase text-white border border-white font-mont font-semibold  md:py-4 md:px-10 py-2 px-4 hover:bg-white hover:text-black">
+                View Collection
+              </button>
             </div>
           </div>
         </div>
       </div>
+
     </div>
+
   );
 }
 

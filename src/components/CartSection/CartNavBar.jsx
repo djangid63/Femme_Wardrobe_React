@@ -1,10 +1,10 @@
 import '../../index.css';
 import { AiOutlineSearch, AiOutlineShopping } from 'react-icons/ai';
 import { useEffect, useState } from 'react';
-import ShoppingCart from './ShoppingCart';
+import ShoppingCart from './SideCart';
 import { Link } from 'react-router-dom';
 
-const NavBar = ({ cart, product, setCart }) => {
+const NavBar = ({ cart, product, setCart, selectedSize }) => {
   // Cart Visible State
   const [isCartVisible, setCartVisible] = useState(false);
 
@@ -19,14 +19,18 @@ const NavBar = ({ cart, product, setCart }) => {
   return (
     <div className="relative flex flex-col md:flex-row justify-evenly items-center w-[100vw] py-6 ">
       <ul className="hidden lg:flex items-center justify-center text-[14px] font-semibold gap-x-7 font-mont whitespace-nowrap">
-        <li className="cursor-pointer hover:underline">Home</li>
+        <Link to='/'>
+          <li className="cursor-pointer hover:underline">Home</li>
+        </Link>
         <Link to='/shop'>
           <li className="cursor-pointer hover:underline">Shop</li>
         </Link>
         <Link to='/about'>
           <li className="cursor-pointer hover:underline">About Us</li>
         </Link>
-        <li className="cursor-pointer hover:underline">Contact Us</li>
+        <Link to='/contact'>
+          <li className="cursor-pointer hover:underline">Contact Us</li>
+        </Link>
       </ul>
       {/* Middle Brand */}
       <div className="text-center md:mr-36">
@@ -58,7 +62,8 @@ const NavBar = ({ cart, product, setCart }) => {
           count={cart}
           isCartVisible={isCartVisible}
           setCartVisible={setCartVisible}
-          setCart = {setCart}
+          setCart={setCart}
+          selectedSize={selectedSize}
         />
       )}
     </div>

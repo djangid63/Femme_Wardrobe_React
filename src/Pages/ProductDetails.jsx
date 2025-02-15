@@ -1,5 +1,5 @@
 import React from 'react';
-import CartNavBar from '../components/HeroSection/CartNavBar';
+import CartNavBar from '../components/CartSection/CartNavBar';
 import FooterSection from '../components/ExploreSection/FotterSection';
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
@@ -18,7 +18,7 @@ const ProductDetails = () => {
   const [count, setCount] = useState(1);
   const [price, setPrice] = useState(product.price * count);
   const [cart, setCart] = useState(0);
-
+  const [selectedSize, setSelected] = useState('Free Size');
   const [isSimmering, setSimmering] = useState(true);
 
   useEffect(() => {
@@ -51,7 +51,7 @@ const ProductDetails = () => {
       <div className='px-20'>
         {/*---------- NavBar  ------------ */}
         <div className='w-full'>
-          <CartNavBar cart={cart} product={product} setCart={setCart} />
+          <CartNavBar cart={cart} product={product} setCart={setCart} selectedSize={selectedSize} />
         </div>
 
         {/*---------- Content ------------ */}
@@ -97,6 +97,7 @@ const ProductDetails = () => {
                 {product.sizes.map((size, index) => (
                   <button
                     key={index}
+                    onClick={() => setSelected(size)}
                     className='py-1 px-3 font-semibold cursor-pointer md:text-[12px] sm:text-sm border border-black text-gray-400 rounded focus:outline-none focus:ring-1 focus:ring-gray-500 hover:bg-black hover:text-white'
                   >
                     {size}

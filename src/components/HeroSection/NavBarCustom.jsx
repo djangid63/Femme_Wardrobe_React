@@ -1,9 +1,12 @@
 import React from 'react'
 import { AiOutlineSearch, AiOutlineShopping, AiOutlineMenu } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 import '../../index.css';
+import ShoppingCart from './../CartSection/SideCart.jsx';
 
 const NavBarCustom = ({ navBarTextColor, navBarBgColor }) => {
+
   return (
     <div className={`flex justify-center items-center md:justify-between py-4 overflow-x-hidden bg-${navBarBgColor}`}>
       <div className='flex w-[100vw] items-center justify-evenly '>
@@ -42,7 +45,9 @@ const NavBarCustom = ({ navBarTextColor, navBarBgColor }) => {
             <AiOutlineSearch className="w-6 h-6" />
           </div>
           <div className="cursor-pointer">
-            <AiOutlineShopping className="w-6 h-6" />
+            <Link to='/cartHome'>
+              <AiOutlineShopping className="w-6 h-6" />
+            </Link>
           </div>
         </div>
       </div>

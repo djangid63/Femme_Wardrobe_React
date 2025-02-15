@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Router, Route } from "react-router-dom";
 import AboutUs from './Pages/AboutUs';
 import ShopPage from "./Pages/ShopPage.jsx";
 import ContactUs from "./Pages/ContactUs.jsx";
+import CartHome from "./components/CartSection/CartHome.jsx";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/about" element={<AboutUs />} />
         <Route path="/shop" element={<ShopPage />} />
         <Route path="/contact" element={<ContactUs />} />
+        <Route path="/cartHome/:id/:count/:selectedSize" element={<CartHome />} />
       </Routes>
     </BrowserRouter>
   );
