@@ -45,7 +45,7 @@ const NavBarCustom = ({ navBarTextColor, navBarBgColor }) => {
             <AiOutlineSearch className="w-6 h-6" />
           </div>
           <div className="cursor-pointer">
-            <Link to='/cartHome'>
+            <Link to='/cartHome/id/cart/selectedSize'>
               <AiOutlineShopping className="w-6 h-6" />
             </Link>
           </div>
