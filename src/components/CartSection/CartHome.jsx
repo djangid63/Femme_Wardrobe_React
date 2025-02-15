@@ -11,11 +11,11 @@ const CartHome = () => {
   return (
     <div>
       <NavBarCustom />
-      <div className="container mx-auto p-4">
-        <h1 className="text-3xl font-bold mb-4">Cart</h1>
-        <div className="border rounded-lg overflow-hidden">
+      <div className="w-[76vw] mx-auto p-4">
+        <h1 className="text-3xl font-mont font-bold mb-4">Cart</h1>
+        <div className="border overflow-hidden">
           <div className="flex items-center p-4 border-b">
-            <img src="path/to/your/image.jpg" alt="Product" className="w-16 h-16 mr-4" />
+            <img src={product.img} alt="Product" className="w-14 h-16 mr-4" />
             <div className="flex-grow">
               <h2 className="text-lg font-semibold">{product.subtitle}</h2>
               <p className="text-sm">Size: {selectedSize}</p>
@@ -23,36 +23,26 @@ const CartHome = () => {
             <div className="ml-4">
               <p className="text-lg">${product.price}</p>
             </div>
-            <div className="ml-4">
-              <div className="flex items-center">
-                <button className="mr-2">-</button>
-                <input type="number" value="2" className="w-8 text-center" readOnly />
-                <button className="ml-2">+</button>
-              </div>
-            </div>
-            <div className="ml-4">
-              <p className="text-lg">$291.00</p>
-            </div>
           </div>
           <div className="p-4 border-b">
             <input type="text" placeholder="Coupon code" className="border p-2 mr-2" />
-            <button className="bg-gray-500 text-white px-4 py-2">Apply Coupon</button>
-            <button className="bg-gray-500 text-white px-4 py-2 float-right">Update Cart</button>
+            <button className="border border-black text-black text-[14px] tracking-widest font-semibold uppercase px-4 py-1 hover:bg-black hover:text-white">Apply Coupon</button>
+            <button className="border border-black text-gray-400 text-[14px] uppercase tracking-widest px-4 py-1 float-right hover:bg-black hover:text-white">Update Cart</button>
           </div>
         </div>
         <div className="mt-8">
-          <div className="border rounded-lg overflow-hidden">
-            <h2 className="text-3xl font-bold p-4 text-center">Cart Totals</h2>
+          <div className="border overflow-hidden">
+            <h2 className="font-mont text-3xl font-bold p-4 text-center">Cart Totals</h2>
             <div className="p-4">
-              <div className="flex justify-between mb-2">
+              <div className="flex justify-between mb-2 text-gray-400">
                 <span>Subtotal</span>
                 <span>$291.00</span>
               </div>
-              <div className="flex justify-between mb-2">
+              <div className="flex justify-between mb-2 text-gray-400">
                 <span>Total</span>
-                <span>$291.00</span>
+                <span>${product.price * count}</span>
               </div>
-              <button className="bg-gray-500 text-white w-full p-2 mt-4">Proceed to Checkout</button>
+              <button className="border border-black text-black uppercase tracking-widest w-full p-4 mt-4 hover:bg-black hover:text-white">Proceed to Checkout</button>
             </div>
           </div>
         </div>
