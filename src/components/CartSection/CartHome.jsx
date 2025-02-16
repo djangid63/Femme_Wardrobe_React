@@ -35,7 +35,7 @@ const CartHome = () => {
           </div>
           <div className="mt-8">
             <div className="border overflow-hidden">
-              <div className='border border-b-gray-300'>
+              <div className='border border-b-gray-400'>
                 <h2 className="font-mainHead text-5xl font-bold p-4 text-center">Cart Totals</h2>
               </div>
               <div className="p-4">
