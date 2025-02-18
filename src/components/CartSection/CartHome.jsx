@@ -30,7 +30,7 @@ const CartHome = () => {
             <div className="font-mont p-4 border-b">
               <input type="text" placeholder="Coupon code" className="border p-2 mr-2" />
               <button className="border border-black text-black text-[12px] tracking-widest font-semibold uppercase px-4 py-2 hover:bg-black hover:text-white">Apply Coupon</button>
-              <button className="border border-black text-gray-500 text-[12px] font-semibold uppercase tracking-widest px-4 py-2 float-right hover:bg-black hover:text-white">Update Cart</button>
+              <button className="border border-black text-gray-500 text-[12px] font-semibold uppercase tracking-widest px-4 py-2 float-right hover:bg-black hover:text-white">Update </button>
             </div>
           </div>
           <div className="mt-8">
