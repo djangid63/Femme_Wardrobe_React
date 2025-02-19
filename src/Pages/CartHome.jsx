@@ -2,7 +2,7 @@ import React from 'react'
 import NavBarCustom from '../components/HeroSection/NavBarCustom';
 import FooterSection from '../components/ExploreSection/FotterSection';
 import productData from '../Data/ProductData';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { useState } from 'react';
 
 
@@ -77,7 +77,9 @@ const CartHome = () => {
                   <span>Total</span>
                   <span>${Math.floor(product.price * cart).toFixed(2)}</span>
                 </div>
-                <button className="font-mont font-semibold border border-black text-black uppercase tracking-widest w-full px-4 py-3 mt-4 hover:bg-black hover:text-white">Proceed to Checkout</button>
+                <Link to='/checkout'>
+                  <button className="font-mont font-semibold border border-black text-black uppercase tracking-widest w-full px-4 py-3 mt-4 hover:bg-black hover:text-white">Proceed to Checkout</button>
+                </Link>
               </div>
             </div>
           </div>

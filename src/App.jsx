@@ -6,6 +6,7 @@ import AboutUs from './Pages/AboutUs';
 import ShopPage from "./Pages/ShopPage.jsx";
 import ContactUs from "./Pages/ContactUs.jsx";
 import CartHome from "./Pages/CartHome.jsx";
+import CheckOutHome from "./Pages/CheckOutHome.jsx";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/shop" element={<ShopPage />} />
         <Route path="/contact" element={<ContactUs />} />
         <Route path="/cartHome/:id/:count/:selectedSize/" element={<CartHome />} />
+        <Route path="/checkout" element={<CheckOutHome />} />
       </Routes>
     </BrowserRouter>
   );
