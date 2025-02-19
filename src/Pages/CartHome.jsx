@@ -1,7 +1,7 @@
-import React, { useEffect } from 'react'
-import NavBarCustom from './../HeroSection/NavBarCustom';
-import FooterSection from '../ExploreSection/FotterSection';
-import productData from '../../Data/ProductData';
+import React from 'react'
+import NavBarCustom from '../components/HeroSection/NavBarCustom';
+import FooterSection from '../components/ExploreSection/FotterSection';
+import productData from '../Data/ProductData';
 import { useParams } from 'react-router-dom';
 import { useState } from 'react';
 
@@ -22,8 +22,6 @@ const CartHome = () => {
   const handleDecrement = () => {
     setCart((prevCount) => (prevCount > 1 ? prevCount - 1 : prevCount));
   };
-
-
 
   return (
     <div className='overflow-x-hidden'>

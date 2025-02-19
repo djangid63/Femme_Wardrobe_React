@@ -5,7 +5,7 @@ import { BrowserRouter, Routes, Router, Route } from "react-router-dom";
 import AboutUs from './Pages/AboutUs';
 import ShopPage from "./Pages/ShopPage.jsx";
 import ContactUs from "./Pages/ContactUs.jsx";
-import CartHome from "./components/CartSection/CartHome.jsx";
+import CartHome from "./Pages/CartHome.jsx";
 
 function App() {
   return (
