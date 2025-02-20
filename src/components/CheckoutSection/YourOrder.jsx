@@ -1,6 +1,7 @@
 import React from 'react';
 
-const YourOrder = () => {
+const YourOrder = ({ id, count, selectedSize, product }) => {
+  console.log(id, count, selectedSize, product);
   return (
     <div className="w-full h-screen md:w-1/2 p-10 mr-52 border border-gray-300 font-mont mb-4">
       <h1 className="text-5xl font-bold mb-4 font-mainHead">Your Order</h1>

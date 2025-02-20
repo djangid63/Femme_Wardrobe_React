@@ -11,15 +11,12 @@ const CheckOutHome = () => {
   const parsedId = parseInt(id);
   const parsedCount = parseInt(count);
   const product = productData.find((product) => product.id === parsedId);
-  console.log(id, count, selectedSize);
-
-
   return (
     <div>
       <NavBarCustom />
       <div className='flex'>
         <BillingDetails />
-        <YourOrder />
+        <YourOrder id={parsedId} count={parsedCount} size={selectedSize} product={product} />
       </div>
       <FooterSection />
     </div>
