@@ -53,7 +53,6 @@ const ProductDetails = () => {
         <div className='w-full'>
           <CartNavBar cart={cart} product={product} setCart={setCart} selectedSize={selectedSize} />
         </div>
-
         {/*---------- Content ------------ */}
         <div className='w-full'>
           <section className='grid md:grid-cols-[1fr_1fr] grid-cols-1 py-10 w-full min-h-screen place-content-end px-32 justify-items-end'>

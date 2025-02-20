@@ -11,7 +11,7 @@ const YourOrder = ({ id, count, selectedSize, product }) => {
           <span className="font-medium  my-4 ">Subtotal</span>
         </div>
         <div className="mt-2 text-gray-400 flex justify-between border-b border-gray-300">
-          <span className='my-4 '>Bohemian Rhapsody Attire - Black x 3 Size: M</span>
+          <span className='my-4 '>${product.} - Black x 3 Size: ${selectedSize}</span>
           <span className='my-4 '>$436.50</span>
         </div>
         <div className="mt-2 text-gray-400 flex justify-between border-b border-gray-300">

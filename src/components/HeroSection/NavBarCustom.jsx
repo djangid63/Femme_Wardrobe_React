@@ -1,9 +1,7 @@
 import React from 'react'
 import { AiOutlineSearch, AiOutlineShopping, AiOutlineMenu } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
-import { useState, useEffect } from 'react';
 import '../../index.css';
-import ShoppingCart from './../CartSection/SideCart.jsx';
 
 const NavBarCustom = ({ navBarTextColor, navBarBgColor }) => {
 
