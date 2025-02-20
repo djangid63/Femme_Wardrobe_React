@@ -14,9 +14,9 @@ const CheckOutHome = () => {
   return (
     <div>
       <NavBarCustom />
-      <div className='flex'>
+      <div className='flex sm:flex-row flex-col '>
         <BillingDetails />
-        <YourOrder id={parsedId} count={parsedCount} size={selectedSize} product={product} />
+        <YourOrder id={parsedId} count={parsedCount} selectedSize={selectedSize} product={product} />
       </div>
       <FooterSection />
     </div>

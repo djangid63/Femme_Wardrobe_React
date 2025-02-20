@@ -3,24 +3,24 @@ import React from 'react';
 const YourOrder = ({ id, count, selectedSize, product }) => {
   console.log(id, count, selectedSize, product);
   return (
-    <div className="w-full h-screen md:w-1/2 p-10 mr-52 border border-gray-300 font-mont mb-4">
+    <div className="w-full h-[100vh] md:w-1/2 p-10 lg:mr-52 mr-6 border border-gray-300 font-mont mb-4">
       <h1 className="text-5xl font-bold mb-4 font-mainHead">Your Order</h1>
       <div className="pb-4">
         <div className="flex justify-between border-b border-gray-300">
           <span className="font-medium my-4 ">Product</span>
-          <span className="font-medium  my-4 ">Subtotal</span>
+          <span className="font-medium my-4 ">Subtotal</span>
         </div>
         <div className="mt-2 text-gray-400 flex justify-between border-b border-gray-300">
-          <span className='my-4 '>${product.} - Black x 3 Size: ${selectedSize}</span>
-          <span className='my-4 '>$436.50</span>
+          <span className='my-4 '>{product.subtitle} - Black x {count} Size: {selectedSize}</span>
+          <span className='my-4 '>${product.price}</span>
         </div>
         <div className="mt-2 text-gray-400 flex justify-between border-b border-gray-300">
           <span className='my-4 '>Subtotal</span>
-          <span className='my-4 '>$436.50</span>
+          <span className='my-4 '>${Math.round(product.price * count).toFixed(2)}</span>
         </div>
         <div className="mt-2 text-gray-400 flex justify-between border-b border-gray-300">
           <span className='my-4 '>Total</span>
-          <span className='my-4 '>$436.50</span>
+          <span className='my-4 '>${Math.round(product.price * count).toFixed(2)}</span>
         </div>
       </div>
       <div className="mt-4 pt-4">

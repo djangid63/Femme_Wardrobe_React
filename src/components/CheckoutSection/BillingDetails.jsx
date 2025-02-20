@@ -2,7 +2,7 @@ import React from 'react';
 
 const BillingDetails = () => {
   return (
-    <div className="w-full h-screen md:w-1/2 p-4 ml-44 mr-10 mb-4">
+    <div className="w-full h-[100vh] md:w-1/2 p-4 ml-0 lg:ml-44 mr-4 md:mb-32">
       <h1 className="text-5xl font-bold mb-4 font-mainHead">Billing Details</h1>
       <form>
         <div className="grid grid-cols-2 gap-4">
