@@ -17,8 +17,8 @@ function App() {
         <Route path="/about" element={<AboutUs />} />
         <Route path="/shop" element={<ShopPage />} />
         <Route path="/contact" element={<ContactUs />} />
-        <Route path="/cartHome/:id/:count/:selectedSize/" element={<CartHome />} />
-        <Route path="/checkout" element={<CheckOutHome />} />
+        <Route path="/cartHome/:id/:count/:selectedSize" element={<CartHome />} />
+        <Route path="/checkout/:id/:count/:selectedSize" element={<CheckOutHome />} />
       </Routes>
     </BrowserRouter>
   );

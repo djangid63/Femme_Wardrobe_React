@@ -43,7 +43,9 @@ const ShoppingCart = ({ product, count, isCartVisible, setCartVisible, setCart, 
                 <Link to={`/cartHome/${product.id}/${count}/${selectedSize}`}>
                   <button className="w-full mt-4 bg-white border-black border text-black font-semibold text-sm font-mont p-4 hover:bg-black hover:text-white">VIEW CART</button>
                 </Link>
-                <button className="w-full mt-2 bg-white border-black border text-black font-semibold text-sm font-mont p-4 hover:bg-black hover:text-white">CHECKOUT</button>
+                <Link to="/checkout/:id/:count/:selectedSize">
+                  <button className="w-full mt-2 bg-white border-black border text-black font-semibold text-sm font-mont p-4 hover:bg-black hover:text-white">CHECKOUT</button>
+                </Link>
               </div>
             </div>
           </div>
