@@ -5,7 +5,7 @@ import reinventedModel from '../../images/BgImages/ReinventingModel.jpeg'
 
 const ReinventedSection = () => {
   return (
-    <div className='w-screen md:h-[105vh] h-[70vh] relative'>
+    <div className='w-screen md:h-[95vh] h-[70vh] relative'>
       <div className='absolute w-[100%] h-[100%] bg-top bg-cover'
         style={{
           backgroundImage: `url(${reinventedBgImg})`,
