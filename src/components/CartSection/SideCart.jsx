@@ -23,9 +23,9 @@ const ShoppingCart = ({ product, count, isCartVisible, setCartVisible, setCart, 
               <h2 className="text-lg font-bold mb-4 font-mont">Shopping Cart</h2>
               <div className="absolute left-0 font-mont border-t-[0.2px] border-gray-300 w-[100vw]"></div>
               <div className=" font-mont flex items-center mb-4 mt-16 border-b py-2">
-                <img src={product.img} alt={product.name} className="w-12 h-14 mr-2" />
+                <img src={product.img} alt={product.subtitle} className="w-12 h-14 mr-2" />
                 <div>
-                  <p className="font-bold font-mont ">{product.name}</p>
+                  <p className="font-bold font-mont">{product.subtitle}</p>
                   <p>Size: {selectedSize}</p>
                   <p>{count} x ${product.price}</p>
                 </div>

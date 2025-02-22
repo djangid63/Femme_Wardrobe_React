@@ -1,7 +1,6 @@
 import React from 'react';
 
 const YourOrder = ({ id, count, selectedSize, product }) => {
-  console.log(id, count, selectedSize, product);
   return (
     <div className="w-full h-[100vh] md:w-1/2 p-10 lg:mr-52 mr-6 border border-gray-300 font-mont mb-4">
       <h1 className="text-5xl font-bold mb-4 font-mainHead">Your Order</h1>
@@ -11,7 +10,7 @@ const YourOrder = ({ id, count, selectedSize, product }) => {
           <span className="font-medium my-4 ">Subtotal</span>
         </div>
         <div className="mt-2 text-gray-400 flex justify-between border-b border-gray-300">
-          <span className='my-4 '>{product.subtitle} - Black x {count} Size: {selectedSize}</span>
+          <span className='my-4 '>{product.subtitle} - Black x <span className='text-gray-600'>{count}</span>  Size: <span className='text-gray-600'>{selectedSize}</span></span>
           <span className='my-4 '>${product.price}</span>
         </div>
         <div className="mt-2 text-gray-400 flex justify-between border-b border-gray-300">
