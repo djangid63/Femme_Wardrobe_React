@@ -133,7 +133,7 @@ const productData = [
     description: "Home / Office Wear / Power Suit Ensemble",
     category: "Office Wear",
     collection: "Power Suit Collection",
-    pricingDetails: "$119.90 - $139.90",
+    pricingDetails: "$119.90 - $138.90",
     productDetails: "Empower your wardrobe with this power suit ensemble, offering a tailored fit and bold design for a commanding presence."
   }
 ]
