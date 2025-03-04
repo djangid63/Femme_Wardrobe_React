@@ -7,7 +7,7 @@ const Initiatives = () => {
         <div className=' col-span-2 row-span-1 flex flex-col items-start justify-start'>
           <p className='antialiased box-border clear-both font-mont text-[11px] font-semibold tracking-[2px] leading-[13.75px] break-words uppercase'>Sustainability Initiatives</p>
 
-          <h1 className='antialiased box-border clear-both font-mainHead text-[56px] italic font-bold leading-[64.4px] break-words capitalize'>Conscious Fashion for a Better Tomorro</h1>
+          <h1 className='antialiased box-border clear-both font-mainHead text-[56px] italic font-bold leading-[64.4px] break-words capitalize'>Conscious Fashion for a Better Tomorrow</h1>
         </div>
 
         <div className='flex gap-x-28 col-span-2'>
